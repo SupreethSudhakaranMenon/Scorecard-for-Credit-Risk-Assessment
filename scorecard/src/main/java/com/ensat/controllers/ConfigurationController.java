@@ -57,7 +57,6 @@ public class ConfigurationController {
     }
 
     
-    // Afficher le formulaire de modification du Product
     
     @RequestMapping("configuration/edit/{id}")
     public String edit(@PathVariable Integer id, Model model) {
