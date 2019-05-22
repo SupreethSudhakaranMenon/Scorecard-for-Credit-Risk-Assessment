@@ -27,6 +27,7 @@ public class Product {
     private String category;
     /*for another database table*/
     
+    
    
     
 
@@ -98,6 +99,8 @@ public class Product {
 	public void setCategory(String category) {
 		this.category = category;
 	}
+
+	
 	
 	
 

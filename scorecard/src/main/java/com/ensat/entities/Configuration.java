@@ -15,12 +15,18 @@ public class Configuration {
 	
 	@Version 
 	private Integer version; 
-	private String green;
 	private String product;
 	private String category;
 	private String characteristic;
-	private String amber;
-	private String red;
+	private String colour;
+	private String hello;
+	private String hola;
+	
+
+	
+	
+	
+
 	
 	
 	
@@ -35,9 +41,7 @@ public class Configuration {
 	public Integer getVersion() {
 		return version; 
 	}
-	public String getGreen() {
-		return green;
-	}
+	
 	public String getProduct() {
 		return product;
 	}
@@ -47,12 +51,14 @@ public class Configuration {
 	public String getCharacteristic() {
 		return characteristic;
 	}
-	public String getAmber() {
-		return amber;
+	public String getColour() {
+		return colour;
 	}
-	public String getRed() {
-		return red;
+	public String getHello() {
+		return hello;
 	}
+	
+	
 	
 	
 	
@@ -69,9 +75,7 @@ public class Configuration {
 	    public void setVersion(Integer version) {
 	        this.version = version;
 	    }
-	    public void setGreen(String green) {
-			this.green = green;
-		}
+	    
 	    public void setProduct(String product) {
 			this.product = product;
 	    }
@@ -83,14 +87,33 @@ public class Configuration {
 		public void setCharacteristic(String characteristic) {
 			this.characteristic = characteristic;
 		}
-
-		public void setAmber(String amber) {
-			this.amber = amber;
+		
+		public void setColour(String colour) {
+			this.colour = colour;
+		}
+		
+		public void setHello(String hello) {
+			this.hello = hello;
 		}
 
-		public void setRed(String red) {
-			this.red = red;
+		public String getHola() {
+			return hola;
 		}
+
+		public void setHola(String hola) {
+			this.hola = hola;
+		}
+
+		
+		
+
+		
+		
+
+		
+		
+		
+		
 		
 
 		

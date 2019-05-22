@@ -23,9 +23,9 @@
        	  		<th>Product</th>
     			<th>Category</th>
     			<th>Characteristic</th>
-    			<th>Green</th>
-    			<th>Amber</th>
-    			<th>Red</th>
+    			<th>Score Range Colour</th>
+    			<th>Range From</th>
+    			<th>To</th>
                 <th>Get</th>
                 <th>Update</th>
                 <th>Delete</th>	
@@ -36,9 +36,10 @@
                 <td th:text="${configuration.product}">Product</td>
                 <td th:text="${configuration.category}">Category</td>
                 <td th:text="${configuration.characteristic}">Characteristic</td>
-                <td th:text="${configuration.green}">Green</td>
-                <td th:text="${configuration.amber}">Amber</td>
-                <td th:text="${configuration.red}">Red</td>
+               	<td th:text="${configuration.colour}">Score Range Colour</td>
+               	<td th:text="${configuration.hello}">Range From</td>
+               	<td th:text="${configuration.hola}">To</td>
+              	
                 
                 
                 <td><a th:href="${ '/configuration/' + configuration.id}"><button type="submit" class="btn btn-primary">Get</button></a></td>

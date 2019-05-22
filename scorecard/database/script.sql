@@ -33,9 +33,9 @@ CREATE TABLE `product` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `version` varchar(512) CHARACTER SET utf8 DEFAULT NULL,
   `characteristic` varchar(512) CHARACTER SET utf8 DEFAULT NULL,
-  `value` varchar(10) DEFAULT NULL,
-  `data` varchar(10) DEFAULT NULL,
-  `category` varchar(10) DEFAULT NULL,
+  `value` varchar(20) DEFAULT NULL,
+  `data` varchar(20) DEFAULT NULL,
+  `category` varchar(20) DEFAULT NULL,
   /*`product_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,*/
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -45,14 +45,17 @@ CREATE TABLE `product` (
 CREATE TABLE `configuration` (
 	`id` int(11) NOT NULL AUTO_INCREMENT,
 	`version` varchar(512) CHARACTER SET utf8 DEFAULT NULL,
-	`product` varchar(512) DEFAULT NULL UNIQUE,
-	`category` varchar(512) DEFAULT NULL UNIQUE,
-	`characteristic` varchar(512) DEFAULT NULL UNIQUE,
-	`green` varchar(20) DEFAULT NULL,
-	`amber` varchar(20) DEFAULT NULL,
-	`red` varchar(20) DEFAULT NULL,
+	`product` varchar(20) DEFAULT NULL,
+	`category` varchar(20) DEFAULT NULL,
+	`characteristic` varchar(20) DEFAULT NULL,
+	`colour` varchar(20) DEFAULT NULL,
+	`hello` varchar(20) DEFAULT NULL,
+	`hola` varchar(20) DEFAULT NULL,
 	PRIMARY KEY (`id`)	
 )
+
+/* hello is used for from */ 
+/* hola is ised for to */
 
 
 /*!40101 SET character_set_client = @saved_cs_client */;

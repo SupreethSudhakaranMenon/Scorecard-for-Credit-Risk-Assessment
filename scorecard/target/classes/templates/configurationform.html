@@ -12,6 +12,21 @@ function conf()
 {
 var con=confirm("Do you want to submit for sure?");
 }
+function colourchange()
+{
+	var a = document.getElementById('colour');
+	document.getElementById('value-label-1').innerHTML = a.options[a.selectedIndex].value;
+}
+function colourchange()
+{
+	var a = document.getElementById('colour');
+	document.getElementById('value-label-2').innerHTML = a.options[a.selectedIndex].value;
+}
+function colourchange()
+{
+	var a = document.getElementById('colour');
+	document.getElementById('value-label-3').innerHTML = a.options[a.selectedIndex].value;
+}
 </script>
     
 </head>
@@ -40,7 +55,7 @@ var con=confirm("Do you want to submit for sure?");
             
           	<div class="form-group">
           		<label class="col-sm-2 control-label">Product:</label>
-          		<div class="col-sm-5">
+          		<div class="col-sm-6">
           			<select class="form-control" th:field="*{product}">
           				<option value="Agriculture">Agriculture</option>
           				<option value="Personal">Personal</option>
@@ -60,7 +75,7 @@ var con=confirm("Do you want to submit for sure?");
           
           	<div class="form-group">
                 <label class="col-sm-2 control-label">Category:</label>
-                <div class="col-sm-5">
+                <div class="col-sm-6">
                     <select class="form-control" th:field="*{category}">
                     	<option value="Individual">Individual</option>
                     	<option value="Organisation">Organisation</option>
@@ -81,7 +96,7 @@ var con=confirm("Do you want to submit for sure?");
             
             <div class="form-group">
                 <label class="col-sm-2 control-label">Characteristic:</label>
-                <div class="col-sm-5">
+                <div class="col-sm-6">
                     <select class="form-control" th:field="*{characteristic}">
                     	<option value="Age">Age</option>
                     	<option value="Income">Income</option>
@@ -90,32 +105,139 @@ var con=confirm("Do you want to submit for sure?");
                 </div>
             </div>
             
-            <div class="form-group">
-            	<label class="col-sm-2 control-label">Score Range:</label>
-            </div>
-            
+           
+           
+           <div class="form-group">
+           		<label class="col-sm-2 control-label">Score Range Colour:</label>
+           			<div class="col-sm-2">
+           				<select id='colour' class="form-control" th:field="*{colour}" onchange="colourchange()">
+           					<option value=" ">Select Colour</option>
+           					<option value="Green">Green</option>
+           					<option value="Amber">Amber</option>
+           					<option value="Red">Red</option>
+           				</select>
+           			</div> 
+           			
+           </div>
+           
+           
+           
+          <div class="form-group">
+           		<label class="col-sm-2 control-label">Range From:</label>
+           			<div class="col-sm-1">
+           				<select class="form-control" th:field="*{hello}">
+           					<option value="0">0</option>
+           					<option value="1">1</option>
+           					<option value="2">2</option>
+           					<option value="3">3</option>
+           					<option value="4">4</option>
+           					<option value="5">5</option>
+           					<option value="6">6</option>
+           					<option value="7">7</option>
+           					<option value="8">8</option>
+           					<option value="9">9</option>
+           					<option value="10">10</option>
+           				</select>
+           			</div> 
+           		<label class="col-sm-2 control-label">To:</label>
+           			<div class="col-sm-1">
+           				<select class="form-control" th:field="*{hola}">
+           					<option value="0">0</option>
+           					<option value="1">1</option>
+           					<option value="2">2</option>
+           					<option value="3">3</option>
+           					<option value="4">4</option>
+           					<option value="5">5</option>
+           					<option value="6">6</option>
+           					<option value="7">7</option>
+           					<option value="8">8</option>
+           					<option value="9">9</option>
+           					<option value="10">10</option>
+           				</select>
+           			</div> 
+           			<label class="col-sm-2 control-label">Value:</label>
+           			<!-- For selecting the colour -->
+           			
+           			<b><p id='value-label-1'></p></b>
+           			
+           </div>
+           
+          <div class="form-group">
+           		<label class="col-sm-2 control-label">From:</label>
+           			<div class="col-sm-1">
+           				<select class="form-control" th:field="*{hello}">
+           					<option value="0">0</option>
+           					<option value="1">1</option>
+           					<option value="2">2</option>
+           					<option value="3">3</option>
+           					<option value="4">4</option>
+           					<option value="5">5</option>
+           					<option value="6">6</option>
+           					<option value="7">7</option>
+           					<option value="8">8</option>
+           					<option value="9">9</option>
+           					<option value="10">10</option>
+           				</select>
+           			</div> 
+           		<label class="col-sm-2 control-label">To:</label>
+           			<div class="col-sm-1">
+           				<select class="form-control" th:field="*{hola}">
+           					<option value="0">0</option>
+           					<option value="1">1</option>
+           					<option value="2">2</option>
+           					<option value="3">3</option>
+           					<option value="4">4</option>
+           					<option value="5">5</option>
+           					<option value="6">6</option>
+           					<option value="7">7</option>
+           					<option value="8">8</option>
+           					<option value="9">9</option>
+           					<option value="10">10</option>
+           				</select>
+           			</div> 
+           			<label class="col-sm-2 control-label">Value:</label>
+           			<b><p id='value-label-2'></p></b>
+           </div>
+           
+           <div class="form-group">
+           		<label class="col-sm-2 control-label">From:</label>
+           			<div class="col-sm-1">
+           				<select class="form-control" th:field="*{hello}">
+           					<option value="0">0</option>
+           					<option value="1">1</option>
+           					<option value="2">2</option>
+           					<option value="3">3</option>
+           					<option value="4">4</option>
+           					<option value="5">5</option>
+           					<option value="6">6</option>
+           					<option value="7">7</option>
+           					<option value="8">8</option>
+           					<option value="9">9</option>
+           					<option value="10">10</option>
+           				</select>
+           			</div> 
+           		<label class="col-sm-2 control-label">To:</label>
+           			<div class="col-sm-1">
+           				<select class="form-control" th:field="*{hola}">
+           					<option value="0">0</option>
+           					<option value="1">1</option>
+           					<option value="2">2</option>
+           					<option value="3">3</option>
+           					<option value="4">4</option>
+           					<option value="5">5</option>
+           					<option value="6">6</option>
+           					<option value="7">7</option>
+           					<option value="8">8</option>
+           					<option value="9">9</option>
+           					<option value="10">10</option>
+           				</select>
+           			</div> 
+           		<label class="col-sm-2 control-label">Value:</label>
+           		<b><p id='value-label-3'></p></b>
+           			
+           </div>
           
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Green:</label>
-                <div class="col-sm-5">
-                    <input type="number"  class="form-control" th:field="*{green}"/> 
-                </div>
-            </div>
             
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Amber:</label>
-                <div class="col-sm-5">
-                     <input type="number" class="form-control" th:field="*{amber}"/> 
-                </div>
-            </div>
-            
-            
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Red:</label>
-                <div class="col-sm-5">
-                     <input type="number" class="form-control" th:field="*{red}"/> 
-                </div>
-            </div>
             
             
            
