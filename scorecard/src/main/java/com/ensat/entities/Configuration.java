@@ -18,9 +18,9 @@ public class Configuration {
 	private String product;
 	private String category;
 	private String characteristic;
-	private String colour;
 	private String hello;
 	private String hola;
+	private String value;
 	
 
 	
@@ -50,9 +50,6 @@ public class Configuration {
 	}
 	public String getCharacteristic() {
 		return characteristic;
-	}
-	public String getColour() {
-		return colour;
 	}
 	public String getHello() {
 		return hello;
@@ -88,9 +85,6 @@ public class Configuration {
 			this.characteristic = characteristic;
 		}
 		
-		public void setColour(String colour) {
-			this.colour = colour;
-		}
 		
 		public void setHello(String hello) {
 			this.hello = hello;
@@ -102,6 +96,14 @@ public class Configuration {
 
 		public void setHola(String hola) {
 			this.hola = hola;
+		}
+
+		public String getValue() {
+			return value;
+		}
+
+		public void setValue(String value) {
+			this.value = value;
 		}
 
 		

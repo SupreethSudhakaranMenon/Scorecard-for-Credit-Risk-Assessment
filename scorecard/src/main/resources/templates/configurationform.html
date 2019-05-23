@@ -6,37 +6,38 @@
 
     <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
     
-    <!-- Java Script for popup message -->
-    <script type="text/javascript">
+
+<script type="text/javascript">   
 function conf()
-{
-var con=confirm("Do you want to submit for sure?");
-}
-function colourchange()
-{
-	var a = document.getElementById('colour');
-	document.getElementById('value-label-1').innerHTML = a.options[a.selectedIndex].value;
-}
-function colourchange()
-{
-	var a = document.getElementById('colour');
-	document.getElementById('value-label-2').innerHTML = a.options[a.selectedIndex].value;
-}
-function colourchange()
-{
-	var a = document.getElementById('colour');
-	document.getElementById('value-label-3').innerHTML = a.options[a.selectedIndex].value;
+	{
+		var con=confirm("Do you want to submit for sure?");
+	}
+
+
+var i = 0;	
+function colourchange1()
+	{		
+		i++;
+		if(i>6){
+		return;
+	}
+		var a = document.getElementById('colour1');
+			if(i%2==0){
+				document.getElementById('value-label-' + i/2).value = a.options[a.selectedIndex].value;
+				document.getElementById(a.options[a.selectedIndex].value).remove();
+	}
+	
 }
 </script>
+
+
     
 </head>
 
 <body>
 <div class="container">
 
-    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
-
-    
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->   
     <!-- th:action@{/product}  directs the form to post to the /product endpoint-->
     <!-- th:object${/product}  expression declares the model object to use for collecting the form data-->
   	
@@ -110,11 +111,12 @@ function colourchange()
            <div class="form-group">
            		<label class="col-sm-2 control-label">Score Range Colour:</label>
            			<div class="col-sm-2">
-           				<select id='colour' class="form-control" th:field="*{colour}" onchange="colourchange()">
+           				<select id='colour1' class="form-control" th:field="*{colour}" onclick="colourchange1()">
            					<option value=" ">Select Colour</option>
-           					<option value="Green">Green</option>
-           					<option value="Amber">Amber</option>
-           					<option value="Red">Red</option>
+           					<option id="Green" value="Green">Green</option>
+           					<option id="Amber" value="Amber">Amber</option>
+           					<option id="Red" value="Red">Red</option>
+           					
            				</select>
            			</div> 
            			
@@ -123,9 +125,9 @@ function colourchange()
            
            
           <div class="form-group">
-           		<label class="col-sm-2 control-label">Range From:</label>
+           		<label class="col-sm-2 control-label" onclick="myFunction()">Range From:</label>
            			<div class="col-sm-1">
-           				<select class="form-control" th:field="*{hello}">
+           				<select class="form-control"  th:field="*{hello}">         		
            					<option value="0">0</option>
            					<option value="1">1</option>
            					<option value="2">2</option>
@@ -155,10 +157,13 @@ function colourchange()
            					<option value="10">10</option>
            				</select>
            			</div> 
+           			
            			<label class="col-sm-2 control-label">Value:</label>
            			<!-- For selecting the colour -->
+           			<div class="col-sm-2">
+           				<input type="text" id='value-label-1' class="form-control" th:field="*{value}"/>
+           			</div>
            			
-           			<b><p id='value-label-1'></p></b>
            			
            </div>
            
@@ -196,7 +201,11 @@ function colourchange()
            				</select>
            			</div> 
            			<label class="col-sm-2 control-label">Value:</label>
-           			<b><p id='value-label-2'></p></b>
+           			<div class="col-sm-2">
+           				<input type="text"  id='value-label-2' class="form-control" th:field="*{value}"/>
+           			</div>
+           			
+           			
            </div>
            
            <div class="form-group">
@@ -233,7 +242,10 @@ function colourchange()
            				</select>
            			</div> 
            		<label class="col-sm-2 control-label">Value:</label>
-           		<b><p id='value-label-3'></p></b>
+           		<div class="col-sm-2">
+           				<input type="text" id='value-label-3' class="form-control" th:field="*{value}"/>
+           			</div>
+           		
            			
            </div>
           

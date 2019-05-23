@@ -48,14 +48,14 @@ CREATE TABLE `configuration` (
 	`product` varchar(20) DEFAULT NULL,
 	`category` varchar(20) DEFAULT NULL,
 	`characteristic` varchar(20) DEFAULT NULL,
-	`colour` varchar(20) DEFAULT NULL,
 	`hello` varchar(20) DEFAULT NULL,
 	`hola` varchar(20) DEFAULT NULL,
+	`value` varchar(20) DEFAULT NULL,
 	PRIMARY KEY (`id`)	
 )
 
 /* hello is used for from */ 
-/* hola is ised for to */
+/* hola is used for to */
 
 
 /*!40101 SET character_set_client = @saved_cs_client */;
