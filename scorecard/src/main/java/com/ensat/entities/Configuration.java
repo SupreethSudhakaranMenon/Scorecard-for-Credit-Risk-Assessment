@@ -21,6 +21,7 @@ public class Configuration {
 	private String hello;
 	private String hola;
 	private String value;
+	private String colour;
 	
 
 	
@@ -104,6 +105,14 @@ public class Configuration {
 
 		public void setValue(String value) {
 			this.value = value;
+		}
+
+		public String getColour() {
+			return colour;
+		}
+
+		public void setColour(String colour) {
+			this.colour = colour;
 		}
 
 		

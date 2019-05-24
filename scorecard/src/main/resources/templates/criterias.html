@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+   
+<title>Scorecard for Credit Risk Assessment</title>
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div th:if="${not #lists.isEmpty(criterias)}">
+    <div class="row text-center">
+                <img src="../../static/images/mifos_logo.jpg" width="200" th:src="@{/images/mifos_logo.jpg}"/>
+            </div>
+            &nbsp;
+            &nbsp;
+        <h2>Information</h2>
+        <table class="table table-striped table-hover">
+            <tr>
+               	<th>Id</th>
+                <!--  <th>Product Id</th> --> 
+                <th>Data Source</th>
+                <th>Get</th>
+                <th>Update</th>
+                <th>Delete</th>	
+            </tr>
+            <tr th:each="criteria : ${criterias}">
+                <td th:text="${criteria.id}"><a href="/criteria/${criteria.id}">Id</a></td>
+                <!--<td th:text="${product.productId}">Product Id</td> -->
+                <td th:text="${criteria.datasource}">Data Source</td>
+                
+                <td><a th:href="${ '/criteria/' + criteria.id}"><button type="submit" class="btn btn-primary">Get</button></a></td>
+                <td><a th:href="${'/criteria/edit/' + criteria.id}"><button type="submit" class="btn btn-primary">Update</button></a></td>
+                <td><a th:href="${'/criteria/delete/' + criteria.id}"><button type="submit" class="btn btn-primary">Delete</button></a></td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+</body>
+</html>

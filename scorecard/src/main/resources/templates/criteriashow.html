@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+   <title>Scorecard for Credit Risk Assessment</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+    
+    <div class="row text-center">
+                <img src="../../static/images/mifos_logo.jpg" width="200" th:src="@{/images/mifos_logo.jpg}"/>
+            </div>
+            &nbsp;
+            &nbsp;
+    <h2>User Information</h2>
+    &nbsp;
+    &nbsp;
+        <div>
+            <form class="form-horizontal">
+            
+               <div class="form-group">
+                    <label class="col-sm-2 control-label">Data Source:</label>
+                    <div class="col-sm-5">
+                        <p class="form-control-static" th:text="${criteria.datasource}">datasource</p>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                                              
+            </form>
+    </div>
+    
+</div>
+
+</body>
+</html>
