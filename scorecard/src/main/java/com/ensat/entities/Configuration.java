@@ -18,8 +18,8 @@ public class Configuration {
 	private String product;
 	private String category;
 	private String characteristic;
-	private String hello;
-	private String hola;
+	private String fromrange;
+	private String torange;
 	private String value;
 	private String colour;
 	
@@ -52,9 +52,7 @@ public class Configuration {
 	public String getCharacteristic() {
 		return characteristic;
 	}
-	public String getHello() {
-		return hello;
-	}
+	
 	
 	
 	
@@ -86,18 +84,8 @@ public class Configuration {
 			this.characteristic = characteristic;
 		}
 		
+
 		
-		public void setHello(String hello) {
-			this.hello = hello;
-		}
-
-		public String getHola() {
-			return hola;
-		}
-
-		public void setHola(String hola) {
-			this.hola = hola;
-		}
 
 		public String getValue() {
 			return value;
@@ -113,6 +101,22 @@ public class Configuration {
 
 		public void setColour(String colour) {
 			this.colour = colour;
+		}
+
+		public String getFromrange() {
+			return fromrange;
+		}
+
+		public void setFromrange(String fromrange) {
+			this.fromrange = fromrange;
+		}
+
+		public String getTorange() {
+			return torange;
+		}
+
+		public void setTorange(String torange) {
+			this.torange = torange;
 		}
 
 		

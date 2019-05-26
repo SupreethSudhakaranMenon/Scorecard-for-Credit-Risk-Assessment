@@ -2,79 +2,109 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
 
-   <title>Scorecard for Credit Risk Assessment</title>
+<title>Scorecard for Credit Risk Assessment</title>
 
-    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
-    
-    <!-- Java Script for popup message -->
-    <script type="text/javascript">
-function conf()
-{
-var con=confirm("Do you want to submit for sure?");
-}
+<!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+<!-- Java Script for popup message -->
+
+<script type="text/javascript">
+	function conf()
+		{
+			var con=confirm("Do you want to submit for sure?");
+		}
 </script>
+
+
+
+
     
 </head>
-
 <body>
 <div class="container">
 
-    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
-
-    
-    <!-- th:action@{/product}  directs the form to post to the /product endpoint-->
-    <!-- th:object${/product}  expression declares the model object to use for collecting the form data-->
+<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+<!-- th:action@{/product}  directs the form to post to the /product endpoint-->
+<!-- th:object${/product}  expression declares the model object to use for collecting the form data-->
   	
-    <div>
-        <form class="form-horizontal" th:object="${criteria}" th:action="@{/criteria}" method="post">
-    
-        
-            <input type="hidden" th:field="*{id}"/>
+<div>
+	<form class="form-horizontal" th:object="${criteria}" th:action="@{/criteria}" method="post">
+			<input type="hidden" th:field="*{id}"/>
             <input type="hidden" th:field="*{version}"/>
             
-            
-            
-            
-            <!--  <div class="form-group">
-                <label class="col-sm-2 control-label">Product Id:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" th:field="*{productId}"/>
-                </div>
-            </div> -->
-          
-          <div class="row text-center">
-                <img src="../../static/images/mifos_logo.jpg" width="200" th:src="@{/images/mifos_logo.jpg}"/>
-            </div>
+	<div class="row text-center">
+        	<a href="https://mifos.org/"><img src="../../static/images/mifos_logo.jpg" width="200" th:src="@{/images/mifos_logo.jpg}"/></a>
+    </div>
+       
             &nbsp;
             &nbsp;
             
-          
-          
-          
-          
+     <div class="form-group">
+              <label class="col-sm-2 control-label">Datasource:</label>
+     	<div class="col-sm-5">
+               <input type="radio" class="form-check-input" id="XML"/> 
+               <label class="form-check-label">XML</label>    
+       	&nbsp; <input type="radio" class="form-check-input" id="JSON"/>
+       	       <label class="form-check-label">JSON</label>  
+        &nbsp; <input type="radio" class="form-check-input" id="SQL"/>
+               <label class="form-check-label">SQL</label>          
+         </div>
+      </div>
+            
+            
+            
+      <div class="form-group">
+            	<label class="col-sm-2 control-label">SQL/API:</label>
+            	<div class="col-sm-5">
+            		<textarea class="form-control" th:field="*{sqlapi}" rows="3"></textarea>
+            	</div>
+      </div>
+            
+            
+            
+            
+            
+            
+            
             <div class="form-group">
-                <label class="col-sm-2 control-label">Datasource:</label>
+                <label class="col-sm-2 control-label">Key:</label>
                 <div class="col-sm-5">
-                    <input type="radio" class="form-check-input" id="XML"/> 
-                    	<label class="form-check-label">XML</label>    
-                   &nbsp; <input type="radio" class="form-check-input" id="JSON"/>
-                    	<label class="form-check-label">JSON</label>  
-                   &nbsp; <input type="radio" class="form-check-input" id="SQL"/>
-                   		<label class="form-check-label">SQL</label>          
+                    <input type="number" class="form-control" th:field="*{dummykey}"/>  
                 </div>
             </div>
-            
-            
             
             
             
             
             <div class="form-group">
             	<label class="col-sm-2 control-label">Statistical Criteria:</label>
-         	<div class="col-sm-10">
-         		<input type="checkbox" class="form-check-input" id="Check1"/>
-         		
+         		<div class="col-sm-10">
+         			<input type="checkbox" class="form-check-input" id="Check1"/>
+         		</div>
          	</div>
+         	
+         	
+         	<div class="form-group">
+         		<label class="col-sm-2 control-label"></label>
+         		<div class="col-sm-3">
+         			<table class="table table-bordered">
+         				<thead>
+         				<tr>
+         				<th scope="col">Criteria</th>
+         				<th scope="col">Score</th>
+         				</tr>
+         				</thead>
+         				<tbody>
+         				<tr>
+         				<td>cell1</td>	
+         				<td>cell2</td>
+         				</tr>
+         				<tr>
+         				<td>cell3</td>
+         				<td>cell4</td>
+         				</tr>
+         				</tbody>
+         			</table>
+         		</div>
          	</div>
             
             
@@ -87,7 +117,7 @@ var con=confirm("Do you want to submit for sure?");
                 
         </form>
     </div>
-    <!--  For another database table -->
+    
     	
     
    

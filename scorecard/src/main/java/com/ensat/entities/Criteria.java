@@ -20,6 +20,8 @@ public class Criteria {
 	
 	
 	private String datasource;
+	private String sqlapi;
+	private String dummykey;
 	
 	
 	
@@ -58,5 +60,18 @@ public class Criteria {
 	}
 	public void setDatasource(String datasource) {
 		this.datasource = datasource;
-	} 
+	}
+	public String getDummykey() {
+		return dummykey;
+	}
+	public void setDummykey(String dummykey) {
+		this.dummykey = dummykey;
+	}
+	public String getSqlapi() {
+		return sqlapi;
+	}
+	public void setSqlapi(String sqlapi) {
+		this.sqlapi = sqlapi;
+	}
+	
 }

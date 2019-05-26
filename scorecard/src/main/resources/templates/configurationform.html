@@ -49,7 +49,7 @@ function colourchange1()
             <input type="hidden" th:field="*{version}"/>
             
           <div class="row text-center">
-                <img src="../../static/images/mifos_logo.jpg" width="200" th:src="@{/images/mifos_logo.jpg}"/>
+                <a href="https://mifos.org/"><img src="../../static/images/mifos_logo.jpg" width="200" th:src="@{/images/mifos_logo.jpg}"/></a>
             </div>
             &nbsp;
             &nbsp;
@@ -127,7 +127,7 @@ function colourchange1()
           <div class="form-group">
            		<label class="col-sm-2 control-label" onclick="myFunction()">Range From:</label>
            			<div class="col-sm-1">
-           				<select class="form-control"  th:field="*{hello}">         		
+           				<select class="form-control"  th:field="*{fromrange}">         		
            					<option value="0">0</option>
            					<option value="1">1</option>
            					<option value="2">2</option>
@@ -143,7 +143,7 @@ function colourchange1()
            			</div> 
            		<label class="col-sm-2 control-label">To:</label>
            			<div class="col-sm-1">
-           				<select class="form-control" th:field="*{hola}">
+           				<select class="form-control" th:field="*{torange}">
            					<option value="0">0</option>
            					<option value="1">1</option>
            					<option value="2">2</option>
@@ -170,7 +170,7 @@ function colourchange1()
           <div class="form-group">
            		<label class="col-sm-2 control-label">From:</label>
            			<div class="col-sm-1">
-           				<select class="form-control" th:field="*{hello}">
+           				<select class="form-control" th:field="*{fromrange}">
            					<option value="0">0</option>
            					<option value="1">1</option>
            					<option value="2">2</option>
@@ -186,7 +186,7 @@ function colourchange1()
            			</div> 
            		<label class="col-sm-2 control-label">To:</label>
            			<div class="col-sm-1">
-           				<select class="form-control" th:field="*{hola}">
+           				<select class="form-control" th:field="*{torange}">
            					<option value="0">0</option>
            					<option value="1">1</option>
            					<option value="2">2</option>
@@ -211,7 +211,7 @@ function colourchange1()
            <div class="form-group">
            		<label class="col-sm-2 control-label">From:</label>
            			<div class="col-sm-1">
-           				<select class="form-control" th:field="*{hello}">
+           				<select class="form-control" th:field="*{fromrange}">
            					<option value="0">0</option>
            					<option value="1">1</option>
            					<option value="2">2</option>
@@ -227,7 +227,7 @@ function colourchange1()
            			</div> 
            		<label class="col-sm-2 control-label">To:</label>
            			<div class="col-sm-1">
-           				<select class="form-control" th:field="*{hola}">
+           				<select class="form-control" th:field="*{torange}">
            					<option value="0">0</option>
            					<option value="1">1</option>
            					<option value="2">2</option>

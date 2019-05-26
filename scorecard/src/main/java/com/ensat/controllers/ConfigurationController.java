@@ -22,12 +22,6 @@ public class ConfigurationController {
         this.configurationService = configurationService;
     }
 
-    /**
-     * List all products.
-     *
-     * @param model
-     * @return
-     */
     @RequestMapping(value = "/configurations", method = RequestMethod.GET)
     public String list(Model model) {
         model.addAttribute("configurations", configurationService.listAllConfigurations());
@@ -35,21 +29,7 @@ public class ConfigurationController {
         return "configurations";
     }
     
-    /*for getting the values of configuration another table in mysqlfv*/
-  
     
-    
-    
-    
-    
-
-    /**
-     * View a specific product by its id.
-     *
-     * @param id
-     * @param model
-     * @return
-     */
     @RequestMapping("configuration/{id}")
     public String showProduct(@PathVariable Integer id, Model model) {
         model.addAttribute("configuration", configurationService.getConfigurationById(id));
@@ -64,14 +44,7 @@ public class ConfigurationController {
         return "configurationform";
     }
     
-    
-
-    /**
-     * New product.
-     *
-     * @param model
-     * @return
-     */
+ 
     @RequestMapping("configuration/new")
     public String newConfiguration(Model model) {
         model.addAttribute("configuration", new Configuration());
@@ -79,27 +52,12 @@ public class ConfigurationController {
     }
     
     
-    
-  
-
-    /**
-     * Save product to database.
-     *
-     * @param product
-     * @return
-     */
     @RequestMapping(value = "configuration", method = RequestMethod.POST)
     public String saveConfiguration(Configuration configuration) {
         configurationService.saveConfiguration(configuration);
         return "redirect:/configuration/" + configuration.getId();
     }
 
-    /**
-     * Delete product by its id.
-     *
-     * @param id
-     * @return
-     */
     @RequestMapping("configuration/delete/{id}")
     public String delete(@PathVariable Integer id) {
         configurationService.deleteConfiguration(id);

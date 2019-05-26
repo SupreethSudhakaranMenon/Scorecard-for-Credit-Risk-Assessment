@@ -11,7 +11,7 @@
     <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
     <div th:if="${not #lists.isEmpty(configurations)}">
     <div class="row text-center">
-                <img src="../../static/images/mifos_logo.jpg" width="200" th:src="@{/images/mifos_logo.jpg}"/>
+                <a href="https://mifos.org/"><img src="../../static/images/mifos_logo.jpg" width="200" th:src="@{/images/mifos_logo.jpg}"/></a>
             </div>
             &nbsp;
             &nbsp;
@@ -37,8 +37,8 @@
                 <td th:text="${configuration.category}">Category</td>
                 <td th:text="${configuration.characteristic}">Characteristic</td>
                	<td th:text="${configuration.value}">Score Range Colour</td>
-               	<td th:text="${configuration.hello}">Range From</td>
-               	<td th:text="${configuration.hola}">To</td>
+               	<td th:text="${configuration.fromrange}">Range From</td>
+               	<td th:text="${configuration.torange}">To</td>
               	
                 
                 

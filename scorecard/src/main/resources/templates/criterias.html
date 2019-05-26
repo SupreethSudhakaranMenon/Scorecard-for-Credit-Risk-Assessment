@@ -11,7 +11,7 @@
     <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
     <div th:if="${not #lists.isEmpty(criterias)}">
     <div class="row text-center">
-                <img src="../../static/images/mifos_logo.jpg" width="200" th:src="@{/images/mifos_logo.jpg}"/>
+                <a href="https://mifos.org/"><img src="../../static/images/mifos_logo.jpg" width="200" th:src="@{/images/mifos_logo.jpg}"/></a>
             </div>
             &nbsp;
             &nbsp;
@@ -19,16 +19,18 @@
         <table class="table table-striped table-hover">
             <tr>
                	<th>Id</th>
-                <!--  <th>Product Id</th> --> 
                 <th>Data Source</th>
+                <th>SQL/API</th>
+                <th>Key</th>
                 <th>Get</th>
                 <th>Update</th>
                 <th>Delete</th>	
             </tr>
             <tr th:each="criteria : ${criterias}">
                 <td th:text="${criteria.id}"><a href="/criteria/${criteria.id}">Id</a></td>
-                <!--<td th:text="${product.productId}">Product Id</td> -->
                 <td th:text="${criteria.datasource}">Data Source</td>
+                <td th:text="${criteria.sqlapi}">SQL/API</td>
+                <td th:text="${criteria.dummykey}">Key</td>
                 
                 <td><a th:href="${ '/criteria/' + criteria.id}"><button type="submit" class="btn btn-primary">Get</button></a></td>
                 <td><a th:href="${'/criteria/edit/' + criteria.id}"><button type="submit" class="btn btn-primary">Update</button></a></td>
