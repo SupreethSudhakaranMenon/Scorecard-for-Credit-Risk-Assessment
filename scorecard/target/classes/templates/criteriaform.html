@@ -41,11 +41,11 @@
      <div class="form-group">
               <label class="col-sm-2 control-label">Datasource:</label>
      	<div class="col-sm-5">
-               <input type="radio" class="form-check-input" id="XML"/> 
+               <input type="radio" class="form-check-input" value="XML" id="XML" th:field="*{datasource}"/> 
                <label class="form-check-label">XML</label>    
-       	&nbsp; <input type="radio" class="form-check-input" id="JSON"/>
+       	&nbsp; <input type="radio" class="form-check-input" value="JSON" id="JSON" th:field="*{datasource}"/>
        	       <label class="form-check-label">JSON</label>  
-        &nbsp; <input type="radio" class="form-check-input" id="SQL"/>
+        &nbsp; <input type="radio" class="form-check-input" value="SQL" id="SQL" th:field="*{datasource}"/>
                <label class="form-check-label">SQL</label>          
          </div>
       </div>
@@ -86,7 +86,7 @@
          	<div class="form-group">
          		<label class="col-sm-2 control-label"></label>
          		<div class="col-sm-3">
-         			<table class="table table-bordered">
+         			<table id="Table" class="table table-bordered">
          				<thead>
          				<tr>
          				<th scope="col">Criteria</th>
@@ -104,6 +104,9 @@
          				</tr>
          				</tbody>
          			</table>
+         			<div class="row">
+         				<button type="button" class="btn btn-primary">Add Row</button>
+         			</div>
          		</div>
          	</div>
             
