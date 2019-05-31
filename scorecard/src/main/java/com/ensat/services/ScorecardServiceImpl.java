@@ -1,7 +1,7 @@
 package com.ensat.services;
 
 import com.ensat.entities.Scorecard;
-import com.ensat.repositories.ScorecardRespository;
+import com.ensat.repositories.ScorecardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +22,7 @@ public class ScorecardServiceImpl implements ScorecardService {
 	
 	@Override
 	public Scorecard getScorecardById(Integer id) {
-		return scorecardRespository.findOne(id);
+		return scorecardRepository.findOne(id);
 	}
 	
 	@Override

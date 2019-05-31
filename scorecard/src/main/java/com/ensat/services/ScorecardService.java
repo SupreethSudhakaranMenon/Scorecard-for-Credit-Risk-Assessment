@@ -7,7 +7,7 @@ public interface ScorecardService {
 
 Iterable<Scorecard> listAllScorecards();
 
-Scorecard get ScorecardById(Integer id);
+Scorecard getScorecardById(Integer id);
 
 Scorecard saveScorecard(Scorecard scorecard);
 
