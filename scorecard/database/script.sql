@@ -48,7 +48,7 @@ CREATE TABLE `criteria` (
 CREATE TABLE `scorecard` (
 	`id` int(11) NOT NULL AUTO_INCREMENT,
 	`version` varchar(512) CHARACTER SET utf8 DEFAULT NULL,
-	`loan_id` int(11) NOT NULL,
+	`loanid` int(11) NOT NULL,
 	`model` varchar(20) DEFAULT NULL,
 	PRIMARY KEY(`id`)
 )

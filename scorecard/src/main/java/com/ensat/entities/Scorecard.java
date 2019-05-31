@@ -15,7 +15,8 @@ public class Scorecard {
 	@Version
 	private Integer version;
 	
-	private String loan_id;
+	
+	private String loanid;
 	
 	
 	
@@ -31,12 +32,12 @@ public class Scorecard {
 	public void setVersion(Integer version) {
 		this.version = version;
 	}
-	public String getLoan_id() {
-		return loan_id;
+	
+	public String getLoanid() {
+		return loanid;
 	}
-
-	public void setLoan_id(String loan_id) {
-		this.loan_id = loan_id;
+	public void setLoanid(String loanid) {
+		this.loanid = loanid;
 	}
 	
 }
