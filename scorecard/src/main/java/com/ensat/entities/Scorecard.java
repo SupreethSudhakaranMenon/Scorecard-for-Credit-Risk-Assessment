@@ -17,6 +17,7 @@ public class Scorecard {
 	
 	
 	private String loanid;
+	private String model;
 	
 	
 	
@@ -38,6 +39,12 @@ public class Scorecard {
 	}
 	public void setLoanid(String loanid) {
 		this.loanid = loanid;
+	}
+	public String getModel() {
+		return model;
+	}
+	public void setModel(String model) {
+		this.model = model;
 	}
 	
 }

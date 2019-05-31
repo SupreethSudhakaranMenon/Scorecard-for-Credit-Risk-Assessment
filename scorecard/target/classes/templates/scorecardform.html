@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+<title>Scorecard for Credit Risk Assessment</title>
+
+<!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+<!-- Java Script for popup message -->
+
+<script type="text/javascript">
+	function conf()
+		{
+			var con=confirm("Do you want to submit for sure?");
+		}
+</script>
+
+
+
+
+    
+</head>
+<body>
+<div class="container">
+
+<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+<!-- th:action@{/product}  directs the form to post to the /product endpoint-->
+<!-- th:object${/product}  expression declares the model object to use for collecting the form data-->
+  	
+<div>
+	<form class="form-horizontal" th:object="${scorecard}" th:action="@{/scorecard}" method="post">
+			<input type="hidden" th:field="*{id}"/>
+            <input type="hidden" th:field="*{version}"/>
+            
+	<div class="row text-center">
+        	<a href="https://mifos.org/"><img src="../../static/images/mifos_logo.jpg" width="200" th:src="@{/images/mifos_logo.jpg}"/></a>
+    </div>
+       
+            &nbsp;
+            &nbsp;
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Loan Id:</label>
+                <div class="col-sm-5">
+                    <input type="number" class="form-control" th:field="*{loanid}"/>  
+                </div>
+            </div>
+            
+     		<div class="form-group">
+     			<label class="col-sm-2 control-label">Model:</label>
+     			<div class="col-sm-5">
+     			<input type="radio" class="form-check-input" value="Criteria" id="Criteria" th:field="*{model}"/>
+     			<label class="form-check-label">Criteria</label>
+     	&nbsp;  <input type="radio" class="form-check-input" value="Statistical" id="Statistical" th:field="*{model}"/>
+     			<label class="form-check-label">Statistical</label>
+     	&nbsp;  <input type="radio" class="form-check-input" value="Machine Learning" id="Machine Learning" th:field="*{model}"/>
+     			<label class="form-check-label">Machine Learning</label>
+     			</div>
+     		</div>
+            
+            
+            
+      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+         	
+         	
+         	<!--  <div class="form-group">
+         		<label class="col-sm-2 control-label"></label>
+         		<div class="col-sm-3">
+         			<table id="Table" class="table table-bordered">
+         				<thead>
+         				<tr>
+         				<th scope="col">Criteria</th>
+         				<th scope="col">Score</th>
+         				</tr>
+         				</thead>
+         				<tbody>
+         				<tr>
+         				<td>cell1</td>	
+         				<td>cell2</td>
+         				</tr>
+         				<tr>
+         				<td>cell3</td>
+         				<td>cell4</td>
+         				</tr>
+         				</tbody>
+         			</table>
+         			<div class="row">
+         				<button type="button" class="btn btn-primary">Add Row</button>
+         			</div>
+         		</div>
+         	</div>
+            
+            -->
+            
+            
+            <div class="row">
+                <button type="submit" onClick="conf()" class="btn btn-primary">Add</button>
+            </div> 
+            
+                
+        </form>
+    </div>
+    
+    	
+    
+   
+    
+</div>
+
+</body>
+</html>
