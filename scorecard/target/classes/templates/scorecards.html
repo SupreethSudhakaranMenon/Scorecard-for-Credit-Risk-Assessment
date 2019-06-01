@@ -1,7 +1,45 @@
 <!DOCTYPE html>
-<head>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
 
+   
+<title>Scorecard for Credit Risk Assessment</title>
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
 </head>
 <body>
-<h1>Welcome to Scorecard Screen</h1>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div th:if="${not #lists.isEmpty(scorecards)}">
+    <div class="row text-center">
+                <a href="https://mifos.org/"><img src="../../static/images/mifos_logo.jpg" width="200" th:src="@{/images/mifos_logo.jpg}"/></a>
+            </div>
+            &nbsp;
+            &nbsp;
+        <h2>Information</h2>
+        <table class="table table-striped table-hover">
+            <tr>
+               	<th>Id</th>
+                <th>Loan Id</th>
+                <th>Model</th>
+                
+                <th>Get</th>
+                <th>Update</th>
+                <th>Delete</th>	
+            </tr>
+            <tr th:each="scorecard : ${scorecards}">
+                <td th:text="${scorecard.id}"><a href="/scorecard/${scorecard.id}">Id</a></td>
+                <td th:text="${scorecard.loanid}">Loan Id</td>
+                <td th:text="${scorecard.model}">Model</td>
+                
+                
+                <td><a th:href="${ '/scorecard/' + scorecard.id}"><button type="submit" class="btn btn-primary">Get</button></a></td>
+                <td><a th:href="${'/scorecard/edit/' + scorecard.id}"><button type="submit" class="btn btn-primary">Update</button></a></td>
+                <td><a th:href="${'/scorecard/delete/' + scorecard.id}"><button type="submit" class="btn btn-primary">Delete</button></a></td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
 </body>
+</html>
