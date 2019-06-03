@@ -12,6 +12,9 @@ function conf()
 {
 var con=confirm("Do you want to submit for sure?");
 }
+function conf2() {
+	  document.getElementById("test").reset();
+	}
 </script>
     
 </head>
@@ -26,7 +29,7 @@ var con=confirm("Do you want to submit for sure?");
     <!-- th:object${/product}  expression declares the model object to use for collecting the form data-->
   	
     <div>
-        <form class="form-horizontal" th:object="${c_feature}" th:action="@{/c_feature}" method="post">
+        <form class="form-horizontal" id="test" th:object="${c_feature}" th:action="@{/c_feature}" method="post">
     
         
             <input type="hidden" th:field="*{id}"/>
@@ -100,17 +103,19 @@ var con=confirm("Do you want to submit for sure?");
             <div class="form-group">
             	<label class="col-sm-2 control-label">Status:</label>
          	<div class="col-sm-10">
-         		<input type="checkbox" class="form-check-input" id="Check1"/>
+         		<input type="checkbox" style="zoom:1.6" class="form-check-input" id="Check1"/>
          		
          	</div>
          	</div>
             
             
             
-            
+            <br/>
             <div class="row">
-                <button type="submit" onClick="conf()" class="btn btn-primary">Add</button>
+                <button type="reset" onClick="conf2()" class="btn btn-light">Cancel</button>
+            	&nbsp;<button type="submit" onClick="conf()" class="btn btn-primary">Submit</button>
             </div> 
+            
             
                 
         </form>

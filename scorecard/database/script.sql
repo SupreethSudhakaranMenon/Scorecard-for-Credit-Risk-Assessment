@@ -4,17 +4,8 @@ USE `springbootdb`;
 -- Table structure for table `product`
 
 
-DROP TABLE IF EXISTS `product`;
-CREATE TABLE `product` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `version` varchar(512) CHARACTER SET utf8 DEFAULT NULL,
-  `characteristic` varchar(512) CHARACTER SET utf8 DEFAULT NULL, 
-  `value` varchar(20) DEFAULT NULL,
-  `data` varchar(20) DEFAULT NULL,
-  `category` varchar(20) DEFAULT NULL,
-  /*`product_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,*/
-  PRIMARY KEY (`id`)
-) 
+DROP TABLE IF EXISTS `c_feature`;
+
 
 
 CREATE TABLE `configuration` (
