@@ -11,7 +11,7 @@ public class C_featureServiceImpl implements C_featureService {
 		private C_featureRepository c_featureRepository;
 		
 		@Autowired
-		public void setC_featureRepository(C_featureRepository c_featureRepository) {
+		public void setCfeatureRepository(C_featureRepository c_featureRepository) {
 			this.c_featureRepository = c_featureRepository;
 		}
 	
