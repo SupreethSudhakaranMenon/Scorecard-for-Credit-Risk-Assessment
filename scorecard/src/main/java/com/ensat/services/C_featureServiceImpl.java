@@ -16,22 +16,22 @@ public class C_featureServiceImpl implements C_featureService {
 		}
 	
 		@Override
-		public Iterable<C_feature> listAllC_features() {
+		public Iterable<C_feature> listAllCfeatures() {
 			return c_featureRepository.findAll();
 		}
 		
 		@Override
-		public C_feature getC_featureById(Integer id) {
+		public C_feature getCfeatureById(Integer id) {
 			return c_featureRepository.findOne(id);
 		}
 		
 		@Override
-		public C_feature saveC_feature(C_feature c_feature) {
+		public C_feature saveCfeature(C_feature c_feature) {
 			return c_featureRepository.save(c_feature);
 		}
 		
 		@Override 
-		public void deleteC_feature(Integer id) {
+		public void deleteCfeature(Integer id) {
 			c_featureRepository.delete(id);
 		}
 }
