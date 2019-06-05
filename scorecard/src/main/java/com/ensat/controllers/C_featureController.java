@@ -20,6 +20,8 @@ public class C_featureController {
 		this.c_featureService = c_featureService;
 	}
 	
+	/*List all details*/
+	
 	@RequestMapping(value = "/c_features" , method = RequestMethod.GET)
 	public String list(Model model) {
 		model.addAttribute("c_features" , c_featureService.listAllCfeatures());
@@ -39,11 +41,15 @@ public class C_featureController {
 		return "c_featureform";
 	}
 	
+	/*Addition of new details*/
+	
 	@RequestMapping("c_feature/new")
 	public String newCfeature(Model model) {
 		model.addAttribute("c_feature" , new C_feature());
 		return "c_featureform";
 	}
+	
+	/*Saving the details in the database*/
 	
 	@RequestMapping(value="c_feature" , method=RequestMethod.POST)
 	public String saveCfeature(C_feature c_feature) {

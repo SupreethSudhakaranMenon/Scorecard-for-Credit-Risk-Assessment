@@ -23,6 +23,7 @@
                 <th>Value</th>
                 <th>Data</th>
                 <th>Category</th>
+                <th>Status</th>
                 <th>Get</th>
                 <th>Update</th>
                 <th>Delete</th>	
@@ -33,6 +34,7 @@
                 <td th:text="${c_feature.value}">Value</td>
                 <td th:text="${c_feature.data}">Data</td>
                 <td th:text="${c_feature.category}">Category</td>
+                <td th:text="${c_feature.status}">Status</td>
                 
                 <td><a th:href="${ '/c_feature/' + c_feature.id}"><button type="submit" class="btn btn-primary">Get</button></a></td>
                 <td><a th:href="${'/c_feature/edit/' + c_feature.id}"><button type="submit" class="btn btn-primary">Update</button></a></td>

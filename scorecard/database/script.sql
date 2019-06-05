@@ -45,12 +45,13 @@ CREATE TABLE `scorecard` (
 
 
 CREATE TABLE `c_feature` (
-	`id` int(11) NOT NULL,
+	`id` int(11) NULL,
 	`version` varchar(512) CHARACTER SET utf8 DEFAULT NULL,
 	`characteristic` varchar(20) DEFAULT NULL,
 	`value` varchar(20) DEFAULT NULL,
 	`data` varchar(20) DEFAULT NULL,
 	`category` varchar(20) DEFAULT NULL,
+	`status` varchar(10) NOT NULL,
 	PRIMARY KEY(`id`)
 )
 

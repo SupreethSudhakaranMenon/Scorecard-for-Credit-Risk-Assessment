@@ -7,18 +7,13 @@
 <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
     
 <!-- Java Script for pop-up message -->
-<script type="text/javascript">
-function conf()
+<script type="text/javascript" th:src="@{../static/js/functions.js}">
+/*function conf()
 {
-	var con=confirm("Do you want to submit for sure?");
-}
-function conf2() {
-	  document.getElementById("test").reset();
-}
-
+	alert("The Details have been submitted");
+	
+}*/
 </script>
-
- 
     
 </head>
 
@@ -113,7 +108,7 @@ function conf2() {
             
             <br/>
             <div class="row">
-                <button type="reset" onClick="conf2()" class="btn btn-light">Cancel</button>
+                <button type="reset" class="btn btn-light">Cancel</button>
             	&nbsp;<button type="submit" onClick="conf()" class="btn btn-primary">Submit</button>
             </div> 
             

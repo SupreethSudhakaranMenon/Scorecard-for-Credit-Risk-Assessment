@@ -22,6 +22,8 @@ public class CriteriaController {
 		this.criteriaService = criteriaService;
 	}
 	
+	/*List all Details*/
+	
 	@RequestMapping(value = "/criterias" , method = RequestMethod.GET)
 	public String list(Model model) {
 		model.addAttribute("criterias",criteriaService.listAllCriterias());
@@ -41,12 +43,16 @@ public class CriteriaController {
 		return "criteriaform";
 	}
 	
+	/*Add new details in the database*/
+	
 	@RequestMapping("criteria/new")
 	public String newCriteria(Model model) {
 		model.addAttribute("criteria" , new Criteria());
 		return "criteriaform";
 	}
 	
+	
+	/*Saving details in the Database*/
 	@RequestMapping(value="criteria" , method = RequestMethod.POST)
 	public String saveCriteria(Criteria criteria) {
 		criteriaService.saveCriteria(criteria);

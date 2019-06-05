@@ -19,6 +19,7 @@ public class C_feature {
 	    private String value;
 	    private String data;
 	    private String category;
+	    private String status;
 	    
 	    
 	    
@@ -86,6 +87,14 @@ public class C_feature {
 		}
 		public void setCategory(String category) {
 			this.category = category;
+		}
+
+		public String getStatus() {
+			return status;
+		}
+
+		public void setStatus(String status) {
+			this.status = status;
 		}
 
 		

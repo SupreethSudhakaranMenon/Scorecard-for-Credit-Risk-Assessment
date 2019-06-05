@@ -21,6 +21,8 @@ public class ScorecardController {
 		this.scorecardService = scorecardService;
 	}
 	
+	/*List all the details*/
+	
 	@RequestMapping(value = "/scorecards" , method = RequestMethod.GET)
 	public String list(Model model) {
 		model.addAttribute("scorecards" , scorecardService.listAllScorecards());
@@ -40,11 +42,15 @@ public class ScorecardController {
 		return "scorecardform";
 	}
 	
+	/*Add new details in the database*/
+	
 	@RequestMapping("scorecard/new")
 	public String newScorecard(Model model) {
 		model.addAttribute("scorecard" , new Scorecard()); 
 		return "scorecardform";
 	}
+	
+	/*Saving details to the Database*/
 	
 	@RequestMapping(value="scorecard" , method=RequestMethod.POST)
 	public String saveScorecard(Scorecard scorecard) {

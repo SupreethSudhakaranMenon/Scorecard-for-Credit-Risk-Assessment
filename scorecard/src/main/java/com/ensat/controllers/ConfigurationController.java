@@ -21,7 +21,9 @@ public class ConfigurationController {
 	public void setConfigurationService(ConfigurationService configurationService) {
         this.configurationService = configurationService;
     }
-
+	
+	/*List all Details*/
+	
     @RequestMapping(value = "/configurations", method = RequestMethod.GET)
     public String list(Model model) {
         model.addAttribute("configurations", configurationService.listAllConfigurations());
@@ -44,14 +46,14 @@ public class ConfigurationController {
         return "configurationform";
     }
     
- 
+    /*Add new details in the database*/
     @RequestMapping("configuration/new")
     public String newConfiguration(Model model) {
         model.addAttribute("configuration", new Configuration());
         return "configurationform";
     }
     
-    
+    /*Saving the details in the database*/
     @RequestMapping(value = "configuration", method = RequestMethod.POST)
     public String saveConfiguration(Configuration configuration) {
         configurationService.saveConfiguration(configuration);
