@@ -32,7 +32,6 @@
             </tr>
             <tr th:each="configuration : ${configurations}">
                 <td th:text="${configuration.id}"><a href="/configuration/${configuration.id}">Id</a></td>
-                <!--<td th:text="${product.productId}">Product Id</td> -->
                 <td th:text="${configuration.product}">Product</td>
                 <td th:text="${configuration.category}">Category</td>
                 <td th:text="${configuration.characteristic}">Characteristic</td>
