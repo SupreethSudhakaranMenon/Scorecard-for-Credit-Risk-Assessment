@@ -5,7 +5,7 @@
     <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
    
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+  
 </head>
 <body>
 <div class="container">
@@ -24,7 +24,7 @@
         
         <h2>Information</h2>
         
-        <input class="form-control" id="myInput" type="text" placeholder="Search.."/>
+        <input class="form-control" id="myInput" type="text" onkeyup="myFunction()" placeholder="Search.."/>
         &nbsp;
         &nbsp;
         
@@ -40,7 +40,7 @@
                 <th>Update</th>
                 <th>Delete</th>	
             </tr>
-            <tr th:each="c_feature : ${c_features}" id="myTable">
+            <tr th:each="c_feature : ${c_features}">
                 <td th:text="${c_feature.id}"><a href="/c_feature/${c_feature.id}">Id</a>	</td>
                 <td th:text="${c_feature.characteristic}">Feature</td>
                 <td th:text="${c_feature.value}">Value</td>
@@ -56,14 +56,7 @@
     </div>
 </div>
 <script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myTable tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
+
 </script>
 </body>
 </html>

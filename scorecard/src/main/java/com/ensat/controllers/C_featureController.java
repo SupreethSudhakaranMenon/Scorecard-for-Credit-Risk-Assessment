@@ -35,6 +35,8 @@ public class C_featureController {
 		return "c_featureshow";
 	}
 	
+	
+	
 	@RequestMapping("c_feature/edit/{id}")
 	public String edit(@PathVariable Integer id,Model model) {
 		model.addAttribute("c_feature" , c_featureService.getCfeatureById(id));
