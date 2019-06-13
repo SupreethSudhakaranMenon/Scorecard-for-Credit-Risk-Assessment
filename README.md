@@ -4,8 +4,8 @@ UI Layer and also CRUD functionality for Characteristic and Configuration screen
 ## Write-up of my work Till date
 https://gist.github.com/SupreethSudhakaranMenon/557660bfad089de12d3befb6d71a627d
 
-## Installation
-Just import it to your IDE and build the project to resolve the dependencies.
+ ## Installation
+Just import it to your IDE and build the project to resolve the dependencies. 
 
 ## Database Configuration
 Add Database credentials to `/resources/application.properties`  
@@ -23,4 +23,5 @@ Add this small snippet in this file `/resources/application.properties`
 **"Server port number can be changed."**
 
 ## Usage  
+Still under construction , some features may not work.
 Run the project through IDE and head out to the `localhost` port as set by you.
