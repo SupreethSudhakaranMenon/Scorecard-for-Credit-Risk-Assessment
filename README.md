@@ -23,5 +23,5 @@ Add this small snippet in this file `/resources/application.properties`
 **"Server port number can be changed."**
 
 ## Usage  
-Still under construction , some features may not work.
+Still under construction , some features may not work.  
 Run the project through IDE and head out to the `localhost` port as set by you.
