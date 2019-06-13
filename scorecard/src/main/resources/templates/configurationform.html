@@ -1,37 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
-
-   <title>Scorecard for Credit Risk Assessment</title>
-
-    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
-    
-
-<script type="text/javascript">   
-function conf()
-	{
-		var con=confirm("Do you want to submit for sure?");
-	}
-
-
-var i = 0;	
-function colourchange1()
-	{		
-		i++;
-		if(i>6){
-		return;
-	}
-		var a = document.getElementById('colour1');
-			if(i%2==0){
-				document.getElementById('value-label-' + i/2).value = a.options[a.selectedIndex].value;
-				document.getElementById(a.options[a.selectedIndex].value).remove();
-	}
-	
-}
-</script>
-
-
-    
+	<title>Scorecard for Credit Risk Assessment</title>
+	<link href="../static/css/style.css" th:href="@{css/style.css}" rel="stylesheet" media="screen"/>
+	<!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+	<script src="../../../static/js/functions.js" th:src="@{/js/functions.js}"></script>
 </head>
 
 <body>
@@ -245,19 +218,24 @@ function colourchange1()
            		<div class="col-sm-2">
            				<input type="text" id='value-label-3' class="form-control" th:field="*{value}"/>
            			</div>
-           		
-           			
            </div>
-          
-            
-            
-            
-           
-            
-            
-            <div class="row">
-                <button type="submit" onClick="conf()" class="btn btn-primary">Add</button>
-            </div> 
+
+
+
+
+			<div class="row">
+				<button type="reset" class="btn btn-light">Cancel</button>
+				&nbsp;<button type="submit" onClick="conf()" class="btn btn-primary">Submit</button>
+			</div>
+
+			<div class="footer">
+				<footer id="footer">
+					<div id="footer-content"><a href="https://mifosforge.jira.com/browse/MIFOSX/component/11710/?selectedTab=com.atlassian.jira.jira-projects-plugin:component-changelog-panel"><p id="pfooter">Release Version: 19.05.RELEASE | Mifos X Release Date: 10/May/2019</p></a></div>
+				</footer>
+			</div>
+
+
+
             
                 
         </form>

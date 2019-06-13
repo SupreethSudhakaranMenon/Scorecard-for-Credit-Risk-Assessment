@@ -28,7 +28,9 @@ public class C_featureController {
 		System.out.println("Returning c_features:");
 		return "c_features";
 	}
-	
+
+
+
 	@RequestMapping("c_feature/{id}")
 	public String showProduct(@PathVariable Integer id,Model model) {
 		model.addAttribute("c_feature" , c_featureService.getCfeatureById(id));
