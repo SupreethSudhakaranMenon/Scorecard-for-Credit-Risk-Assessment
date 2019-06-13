@@ -3,9 +3,9 @@
 <head lang="en">
 <title>Scorecard for Credit Risk Assessment</title>
     <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
-   
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="../../../static/js/functions.js" th:src="@{/js/functions.js}"></script>
+
 </head>
 <body>
 <div class="container">
@@ -20,17 +20,15 @@
             
             &nbsp;
             &nbsp;
-        
-        
         <h2>Information</h2>
+
         
         <input class="form-control" id="myInput" type="text" onkeyup="myFunction()" placeholder="Search.."/>
         &nbsp;
         &nbsp;
-        
         <table class="table table-striped table-hover">
             <tr>
-               	<th>Id</th>
+                <th>Id</th>
                 <th>Feature</th>
                 <th>Value</th>
                 <th>Data</th>
@@ -40,14 +38,13 @@
                 <th>Update</th>
                 <th>Delete</th>	
             </tr>
-            <tr th:each="c_feature : ${c_features}">
-                <td th:text="${c_feature.id}"><a href="/c_feature/${c_feature.id}">Id</a>	</td>
+            <tr th:each="c_feature : ${c_features}" onclick="window.location.href='https://www.google.com';">
+                <td th:text="${c_feature.id}"><a href="/c_feature/${c_feature.id}">Id</a></td>
                 <td th:text="${c_feature.characteristic}">Feature</td>
                 <td th:text="${c_feature.value}">Value</td>
                 <td th:text="${c_feature.data}">Data</td>
                 <td th:text="${c_feature.category}">Category</td>
                 <td th:text="${c_feature.status}">Status</td>
-                
                 <td><a th:href="${ '/c_feature/' + c_feature.id}"><button type="submit" class="btn btn-primary">Get</button></a></td>
                 <td><a th:href="${'/c_feature/edit/' + c_feature.id}"><button type="submit" class="btn btn-primary">Update</button></a></td>
                 <td><a th:href="${'/c_feature/delete/' + c_feature.id}"><button type="submit" class="btn btn-primary">Delete</button></a></td>
@@ -55,8 +52,13 @@
         </table>
     </div>
 </div>
-<script>
-
-</script>
+&nbsp;
+&nbsp;
+<!--FOOTER-->
+<div class="footer">
+    <footer id="footer">
+        <div id="footer-content"><a href="https://mifosforge.jira.com/browse/MIFOSX/component/11710/?selectedTab=com.atlassian.jira.jira-projects-plugin:component-changelog-panel"><p id="pfooter">Release Version: 19.05.RELEASE | Mifos X Release Date: 10/May/2019</p></a></div>
+    </footer>
+</div>
 </body>
 </html>
