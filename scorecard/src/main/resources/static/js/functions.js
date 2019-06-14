@@ -84,7 +84,7 @@ function populatedata() {
 
     //Add the Options to the DropDownList of Value.
     for (var i = 0; i < data.length; i++) {
-        var option = document.createElement("OPTION")
+        var option = document.createElement("OPTION");
 
         //Set Value Name in Text part.
         option.innerHTML = data[i].Name;
@@ -112,7 +112,7 @@ function populatecategory() {
 
     //Add the Options to the DropDownList of Value.
     for (var i = 0; i < category.length; i++) {
-        var option = document.createElement("OPTION")
+        var option = document.createElement("OPTION");
 
         //Set Value Name in Text part.
         option.innerHTML = category[i].Name;
