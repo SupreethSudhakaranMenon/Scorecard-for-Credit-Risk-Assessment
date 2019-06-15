@@ -8,6 +8,7 @@
     
 <!-- Java Script for pop-up message -->
     <script src="../../../static/js/functions.js" th:src="@{/js/functions.js}"></script>
+    <script src="../../../static/js/feature.js" th:src="@{/js/feature.js}"></script>
     <script type="text/javascript" src="../../../static/js/details.json" th:src="@{/js/details.json}"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
@@ -54,23 +55,14 @@
             <div class="form-group">
                 <label class="col-sm-2 control-label">Value:</label>
                 <div class="col-sm-3">
-                    <select class="form-control" id="value" th:field="*{value}">
-<!--                    	<option value="Binary">Binary</option>-->
-<!--                    	<option value="Nominal">Nominal</option>-->
-<!--                    	<option value="Interval">Interval</option>-->
-<!--                    	<option value="Ratio">Ratio</option>-->
-                    </select>
+                    <select class="form-control" id="value" th:field="*{value}"></select>
                 </div>
             </div>
             
             <div class="form-group">
                 <label class="col-sm-2 control-label">Data:</label>
                 <div class="col-sm-3">
-                    <select class="form-control" id="data" th:field="*{data}">
-<!--                    	<option value="Numeric">Numeric</option>-->
-<!--                    	<option value="Character">Character</option>-->
-<!--                    	<option value="Date">Date</option>-->
-                    </select>
+                    <select class="form-control" id="data" th:field="*{data}"></select>
                 </div>
             </div>
             
@@ -80,13 +72,7 @@
              <div class="form-group">
                 <label class="col-sm-2 control-label">Category:</label>
                 <div class="col-sm-3">
-                    <select class="form-control" id="category" th:field="*{category}">
-<!--                    	<option value="Individual">Individual</option>-->
-<!--                    	<option value="Organisation">Organisation</option>-->
-<!--                    	<option value="Country">Country</option>-->
-<!--                    	<option value="Credit History">Credit History</option>-->
-<!--                    	<option value="Loan">Loan</option>-->
-                    </select>
+                    <select class="form-control" id="category" th:field="*{category}"></select>
                 </div>
             </div>
             
@@ -111,9 +97,7 @@
             <div class="row">
                 <button type="reset" class="btn btn-light">Cancel</button>
             	<button type="submit" onClick="conf()" class="btn btn-primary">Submit</button>
-<!--                <button type="button" onclick="load()" class="btn btn-primary">Length</button>-->
-<!--                <button type="button" onclick="load()" class="btn btn-primary">Tets</button>-->
-                </div>
+            </div>
 
 
 
