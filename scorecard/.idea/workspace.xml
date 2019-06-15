@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9fa2363-2073-4d56-b0b8-af22da3562a7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/functions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/c_featureform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/c_featureform.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/configurationform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/configurationform.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/details.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/details.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/functions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/c_featureform.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/c_featureform.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/configurationform.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/configurationform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/c_features.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/c_features.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,8 +20,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/c_featureform.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1362">
+            <state relative-caret-position="170">
               <caret line="10" column="69" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/c_features.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -36,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+            <state relative-caret-position="182">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
             </state>
           </provider>
         </entry>
@@ -45,13 +47,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/feature.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="641">
+            <state relative-caret-position="1479">
               <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/configuration.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
@@ -63,7 +65,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/configurationform.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2023">
+            <state relative-caret-position="1258">
               <caret line="119" column="48" selection-start-line="119" selection-start-column="48" selection-end-line="119" selection-end-column="48" />
             </state>
           </provider>
@@ -92,7 +94,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ensat/controllers/C_featureController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/c_features.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/configurations.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/details.json" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/feature.js" />
@@ -101,6 +102,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/configuration.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/productform.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/functions.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/c_features.html" />
       </list>
     </option>
   </component>
@@ -256,18 +258,18 @@
       <workItem from="1560438996647" duration="7930000" />
       <workItem from="1560483710430" duration="18893000" />
       <workItem from="1560527592650" duration="6794000" />
-      <workItem from="1560569539086" duration="10470000" />
+      <workItem from="1560569539086" duration="19429000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65079000" />
+    <option name="totallyTimeSpent" value="74038000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1860817" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.1860817" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -371,17 +373,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/c_features.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="40" column="102" selection-start-line="40" selection-start-column="102" selection-end-line="40" selection-end-column="105" />
-          <folding>
-            <element signature="e#1025#1031#0" expanded="true" />
-            <element signature="e#1040#1046#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -469,30 +460,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/configurationform.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2023">
-          <caret line="119" column="48" selection-start-line="119" selection-start-column="48" selection-end-line="119" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/c_featureform.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1362">
-          <caret line="10" column="69" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/feature.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
+        <state relative-caret-position="1479">
           <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
         </state>
       </provider>
@@ -501,6 +471,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="41" lean-forward="true" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/configurationform.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="119" column="48" selection-start-line="119" selection-start-column="48" selection-end-line="119" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/c_featureform.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="69" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/c_features.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
         </state>
       </provider>
     </entry>
