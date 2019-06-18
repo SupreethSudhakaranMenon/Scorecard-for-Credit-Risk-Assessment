@@ -1,4 +1,4 @@
-pfooter
+.pfooter
 {
 	color : #4F99ED;
 	text-align : center;
@@ -11,4 +11,150 @@ pfooter
 	bottom: 0;
 	width: 100%;
 	text-align: center;
+}
+
+#header /*Used for Create Characteristic Screen*/
+{
+	color: #666F73;
+    font-size: 24px;
+}
+
+#header2 /*Used for c_features*/
+{
+
+	color: #666F73;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#test /*Used for giving gaps in div in c_features*/
+{
+	margin-bottom: 5px;
+}
+
+#field /*Used for feature , data , category  fields*/
+{
+    color: #666F73;
+    font-size: 14px;
+    float: left;
+    padding: 7px 15px 0px;
+}
+
+#features /*Used for c_features html page */
+{
+	color: #666F73;
+	font-size: 14px;
+}
+
+/*Used for search bars in the c_features html page */
+.two-col {
+	overflow: hidden;/* Makes this div contain its floats */
+}
+
+.two-col .col1,
+.two-col .col2,
+.two-col .col3
+{
+	width: 20%; /*used for spacing betweeen two of the search bars*/
+}
+
+.two-col .col1 {
+	float: left;
+}
+
+.two-col .col2 {
+	float: left;
+}
+
+.two-col .col3 {
+	float: left;
+}
+
+.two-col label {
+	display: block;
+}
+
+
+
+
+.card {
+	background: #fff;
+	display: block;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	border-radius: 2px 2px 0 0;
+	color: #666F73;
+}
+.well {
+	min-height: 20px;
+	padding: 19px;
+	margin-bottom: 20px;
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+/*#mifos-reskin-body-view {*/
+/*	padding: 90px 15px 0 65px;*/
+/*	background-color: #ebeff1;*/
+/*}*/
+
+/*#mifos-reskin-ui-container {*/
+/*	position: absolute;*/
+/*	top: 52px;*/
+/*	bottom: 0;*/
+/*	right: 0;*/
+/*	left: 0;*/
+/*	overflow: auto;*/
+/*	display: -webkit-box;*/
+/*	display: -moz-box;*/
+/*	display: -ms-flexbox;*/
+/*	display: -webkit-flex;*/
+/*	display: flex;*/
+/*	-webkit-flex-direction: column;*/
+/*	flex-direction: column;*/
+/*}*/
+
+.form-control {
+    border-radius: 0;
+    border: 1px solid #e0e0e0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+#button
+{
+    float: right;
+	margin-right: 10px;
+}
+
+#active
+{
+    color: #777777;
+    font-size: 12px;
+}
+.li
+{
+    display: inline-block;
 }

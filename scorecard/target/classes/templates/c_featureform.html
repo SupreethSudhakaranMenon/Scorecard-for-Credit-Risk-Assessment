@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
 <title>Scorecard for Credit Risk Assessment</title>
-<link href="../static/css/style.css" th:href="@{css/style.css}" rel="stylesheet" media="screen"/>
+<link href="../../../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" media="screen"/>
    
 <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
     
@@ -20,31 +20,21 @@
     <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/--> 
     <!-- th:action@{/product}  directs the form to post to the /product endpoint-->
     <!-- th:object${/product}  expression declares the model object to use for collecting the form data-->
-  	
-    <div>
-        <form class="form-horizontal" id="test" th:object="${c_feature}" th:action="@{/c_feature}" method="post">
-    
-        
+
+    <div class="">
+        <form class="form-horizontal"  th:object="${c_feature}" th:action="@{/c_feature}" method="post">
             <input type="hidden" th:field="*{id}"/>
             <input type="hidden" th:field="*{version}"/>
-            
-            
-            
-            
-           
-          
-          <div class="row text-center">
-                <a href="https://mifos.org/"><img src="../../static/images/mifos_logo.jpg" width="200" th:src="@{/images/mifos_logo.jpg}"/></a>
-          </div>
+<!--          <div class="row text-center">-->
+<!--                <a href="https://mifos.org/"><img src="../../static/images/mifos_lg-logo.jpg" width="200" th:src="@{/images/mifos_lg-logo.jpg}"/></a>-->
+<!--          </div>-->
             &nbsp;
+            <p style="color: #4F99ED; font-size: 12px; display: inline;">Create Feature Screen /</p><p style="color: #777777; font-size: 12px; display: inline;"> Create Characteristic</p>
+            <h2 id="header">Create Characteristic</h2>
+
             &nbsp;
-            
-          
-          
-          
-          
             <div class="form-group">
-                <label class="col-sm-2 control-label">Feature:</label>
+                <label class="col-sm-2 control-label" id="field">Feature</label>
                 <div class="col-sm-3">
                     <input type="text" pattern="([a-zA-Z]{1,20})" class="form-control" th:field="*{characteristic}"/>
                    
@@ -53,14 +43,14 @@
             
             
             <div class="form-group">
-                <label class="col-sm-2 control-label">Value:</label>
+                <label class="col-sm-2 control-label" id="field">Value</label>
                 <div class="col-sm-3">
                     <select class="form-control" id="value" th:field="*{value}"></select>
                 </div>
             </div>
             
             <div class="form-group">
-                <label class="col-sm-2 control-label">Data:</label>
+                <label class="col-sm-2 control-label" id="field">Data</label>
                 <div class="col-sm-3">
                     <select class="form-control" id="data" th:field="*{data}"></select>
                 </div>
@@ -70,7 +60,7 @@
            
             
              <div class="form-group">
-                <label class="col-sm-2 control-label">Category:</label>
+                <label class="col-sm-2 control-label" id="field">Category</label>
                 <div class="col-sm-3">
                     <select class="form-control" id="category" th:field="*{category}"></select>
                 </div>
@@ -84,7 +74,7 @@
             <!-- End changes for checking my json -->
             
             <div class="form-group">
-            	<label class="col-sm-2 control-label">Status:</label>
+            	<label class="col-sm-2 control-label" id="field">Status</label>
          	<div class="col-sm-10">
          		<input type="checkbox" style="zoom:1.6" class="form-check-input" id="Check1"/>
          		
@@ -95,8 +85,8 @@
             
             <br/>
             <div class="row">
-                <button type="reset" class="btn btn-light">Cancel</button>
-            	<button type="submit" onClick="conf()" class="btn btn-primary">Submit</button>
+            	<button type="submit" onClick="conf()" class="btn btn-primary" id="button">Submit</button>
+                <button type="reset" class="btn btn-light" id="button">Cancel</button>
             </div>
 
 
@@ -106,22 +96,10 @@
             	<div id="footer-content"><a href="https://mifosforge.jira.com/browse/MIFOSX/component/11710/?selectedTab=com.atlassian.jira.jira-projects-plugin:component-changelog-panel"><p id="pfooter">Release Version: 19.05.RELEASE | Mifos X Release Date: 10/May/2019</p></a></div>
             	</footer>
 			</div>
-            
-            
-            
-            
-                
         </form>
-        
-        
     </div>
-   
-    	
-    
-   
-    
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
 
 
 </body>

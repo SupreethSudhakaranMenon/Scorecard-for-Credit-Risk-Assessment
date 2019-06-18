@@ -5,7 +5,7 @@
     <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="../../../static/js/functions.js" th:src="@{/js/functions.js}"></script>
-    
+    <link href="../../../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" media="screen"/>
 </head>
 <body>
 <div class="container">
@@ -14,29 +14,43 @@
    
     <!-- For the Mifos logo -->
     <div class="row text-center">
-                <a href="https://mifos.org/"><img src="../../static/images/mifos_logo.jpg" width="200" th:src="@{/images/mifos_logo.jpg}"/></a>
+                <a href="https://mifos.org/"><img src="../../static/images/mifos_lg-logo.jpg" width="200" th:src="@{/images/mifos_lg-logo.jpg}"/></a>
     </div>
     <!-- End mifos logo -->
             
             &nbsp;
-            &nbsp;
-        <h2>Information</h2>
+        <p style="color: #777777; font-size: 12px;">Features</p>   &nbsp;
+        <h4 id="header2">List of Features</h4>
 
-        
-        <input class="form-control" id="myInput" type="text" onkeyup="myFunction()" placeholder="Search.."/>
-        &nbsp;
+        <div class="two-col">
+            <div class="col1">
+                <input class="form-control" id="field1" type="text" style="width:200px;" onkeyup="myFunction()" placeholder="Filter display by name/client..."/>
+            </div>
+            <div class="col2">
+                <input class="form-control" id="field2" type="text" style="width:200px;" onkeyup="myFunction()" placeholder="Find by name/mobile/client/externalId/..."/>
+
+            </div>
+            <div class="col3">
+
+            </div>
+
+            <div id="test" class="col-sm-3">
+                <a href="#" th:href="@{/c_features}" class="btn btn-primary">Import Features</a>
+                <a href="#" th:href="@{/c_feature/new}" class="btn btn-primary">Create Feature</a>
+            </div>
+        </div>
         &nbsp;
         <table class="table table-striped table-hover">
             <tr>
-                <th>Id</th>
-                <th>Feature</th>
-                <th>Value</th>
-                <th>Data</th>
-                <th>Category</th>
-                <th>Status</th>
-                <th>Get</th>
-                <th>Update</th>
-                <th>Delete</th>	
+                <th id="features">Id</th>
+                <th id="features">Feature</th>
+                <th id="features">Value</th>
+                <th id="features">Data</th>
+                <th id="features">Category</th>
+                <th id="features">Status</th>
+                <th id="features">Get</th>
+                <th id="features">Update</th>
+
             </tr>
             <tr th:each="c_feature : ${c_features}" th:attr="onclick=|goTo('${c_feature.id}')|">
 <!--                onclick="goTo('localhost:8233' + this.getElementsByTagName('td')[6].getElementsByTagName('a')[0].getAttribute('href'))"-->
@@ -50,8 +64,7 @@
                     <td th:text="${c_feature.status}">Status</td>
                     <td><a th:href="${ '/c_feature/' + c_feature.id}"><button type="submit" class="btn btn-primary">Get</button></a></td>
                     <td><a th:href="${'/c_feature/edit/' + c_feature.id}"><button type="submit" class="btn btn-primary">Update</button></a></td>
-                    <td><a th:href="${'/c_feature/delete/' + c_feature.id}"><button type="submit" class="btn btn-primary">Delete</button></a></td>
-<!--                </div>-->
+<!--    </div>-->
             </tr>
         </table>
     </div>

@@ -5,7 +5,8 @@
    
 <title>Scorecard for Credit Risk Assessment</title>
     <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="../../../static/js/functions.js" th:src="@{/js/functions.js}"></script>
 </head>
 <body>
 <div class="container">
@@ -29,9 +30,9 @@
     			<th>To</th>
                 <th>Get</th>
                 <th>Update</th>
-                <th>Delete</th>	
+
             </tr>
-            <tr th:each="configuration : ${configurations}">
+            <tr th:each="configuration : ${configurations}" th:attr="onclick=|goTocon('${configuration.id}')|">
                 <td th:text="${configuration.id}"><a href="/configuration/${configuration.id}">Id</a></td>
                 <td th:text="${configuration.product}">Product</td>
                 <td th:text="${configuration.category}">Category</td>
@@ -41,7 +42,7 @@
                	<td th:text="${configuration.torange}">To</td>
                 <td><a th:href="${ '/configuration/' + configuration.id}"><button type="submit" class="btn btn-primary">Get</button></a></td>
                 <td><a th:href="${'/configuration/edit/' + configuration.id}"><button type="submit" class="btn btn-primary">Update</button></a></td>
-                <td><a th:href="${'/configuration/delete/' + configuration.id}"><button type="submit" class="btn btn-primary">Delete</button></a></td>
+
             </tr>
         </table>
 

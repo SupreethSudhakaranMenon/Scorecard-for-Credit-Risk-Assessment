@@ -31,7 +31,7 @@ function colourchange1()
 var ourRequest = new XMLHttpRequest();
 ourRequest.open('GET','https://supreethsudhakaranmenon.github.io/details.json');
 ourRequest.onload = function() {
-	 //console.log(ourRequest.responseText);
+	 console.log(ourRequest.responseText);
 };
 ourRequest.send();
 var test = JSON.stringify(ourRequest.responseText);
@@ -54,11 +54,23 @@ function goTo(url)
 	// When using on click comment out url line
 	url = 'localhost:8233/c_feature/'+url;
 	console.log(url);
-	window.location.assign(''+url);
-	// window.location.reload();
-	return false;
+	// window.location.assign(''+url);
+    window.open(url);
+    // window.location.reload();
+
 };
 
+function goTocon(url)
+{
+    // conso
+    // When using on click comment out url line
+    url = 'localhost:8233/configuration/'+url;
+    console.log(url);
+    // window.location.assign(''+url);
+    window.open(url);
+    // window.location.reload();
+
+};
 
 
 
