@@ -47,5 +47,18 @@ var test = JSON.stringify(ourRequest.responseText);
 
 
 
+// Used for getting the user details from details page.
+function goTo(url)
+{
+	// conso
+	// When using on click comment out url line
+	url = 'localhost:8233/c_feature/'+url;
+	console.log(url);
+	window.location.assign(''+url);
+	// window.location.reload();
+	return false;
+};
+
+
 
 
