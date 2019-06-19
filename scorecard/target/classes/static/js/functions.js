@@ -31,7 +31,7 @@ function colourchange1()
 var ourRequest = new XMLHttpRequest();
 ourRequest.open('GET','https://supreethsudhakaranmenon.github.io/details.json');
 ourRequest.onload = function() {
-	 console.log(ourRequest.responseText);
+	 //console.log(ourRequest.responseText);
 };
 ourRequest.send();
 var test = JSON.stringify(ourRequest.responseText);
@@ -60,17 +60,36 @@ function goTo(url)
 
 };
 
-function goTocon(url)
-{
-    // conso
-    // When using on click comment out url line
-    url = 'localhost:8233/configuration/'+url;
-    console.log(url);
-    // window.location.assign(''+url);
-    window.open(url);
-    // window.location.reload();
+// function goTocon(url)
+// {
+//     // conso
+//     // When using on click comment out url line
+//     url = 'localhost:8233/configuration/'+url;
+//     console.log(url);
+//     // window.location.assign(''+url);
+//     window.open(url);
+//     // window.location.reload();
+//
+// };
 
-};
+// function myFunction()
+// {
+// 	var input , filter , ul , li , a, i;
+// 	input = document.getElementById("myInput")
+// 	filter = input.value.toUpperCase();
+// 	ul = document.getElementsByClassName("list-group");
+// 	li = ul.document.getElementsByTagName("li");
+// 	for (i=0;<li.length;i++)
+// 	{
+// 		a = li[i].getElementsByTagName("a")[0];
+// 		if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+// 			li[i].style.display = "";
+// 		}
+// 		else {
+// 			li[i.style.display = "none";]
+// 		}
+// 	}
+// }
 
 
 

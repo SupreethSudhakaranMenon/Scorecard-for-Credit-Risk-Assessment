@@ -25,6 +25,7 @@
 	color: #666F73;
 	font-size: 18px;
 	font-weight: bold;
+	padding-left: 10px;
 }
 
 #test /*Used for giving gaps in div in c_features*/
@@ -44,6 +45,7 @@
 {
 	color: #666F73;
 	font-size: 14px;
+	background-color: #F5F5F5;
 }
 
 /*Used for search bars in the c_features html page */
@@ -74,6 +76,24 @@
 	display: block;
 }
 
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {  /*Used for table one hover change colour to blue for c_features*/
+	background-color: #4F99ED;
+	cursor: pointer;
+}
+
+
+.table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+table {
+	background-color: transparent;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 
 
