@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
+    <link rel="icon" type="image/png" src="../../static/images/mifos-logo-flat.png" th:src="@{/images/mifos-logo-flat.png}"/>
 <title>Scorecard for Credit Risk Assessment</title>
     <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -50,7 +51,7 @@
                 <th id="features">Status</th>
                 <th id="features">Get</th>
                 <th id="features">Update</th>
-                <th id="features">Delete</th>
+<!--                <th id="features">Delete</th>-->
             </tr>
             </thead>
             <tr th:each="c_feature : ${c_features}" th:attr="onclick=|goTo('${c_feature.id}')|">
@@ -65,7 +66,7 @@
                     <td th:text="${c_feature.status}">Status</td>
                     <td><a th:href="${ '/c_feature/' + c_feature.id}"><button type="submit" class="btn btn-primary">Get</button></a></td>
                     <td><a th:href="${'/c_feature/edit/' + c_feature.id}"><button type="submit" class="btn btn-primary">Update</button></a></td>
-                    <td><a th:href="${'/c_feature/delete/' + c_feature.id}"><button type="submit" class="btn btn-primary">Delete</button></a></td>
+<!--                    <td><a th:href="${'/c_feature/delete/' + c_feature.id}"><button type="submit" class="btn btn-primary">Delete</button></a></td>-->
 
                 <!--    </div>-->
             </tr>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
+    <link rel="icon" type="image/png" src="../../static/images/mifos-logo-flat.png" th:src="@{/images/mifos-logo-flat.png}"/>
+
     <title>Scorecard for Credit Risk Assessment</title>
     <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
 </head>
@@ -12,9 +14,47 @@
 </div>
 
 
-<div class="row text-center">
-                <a href="https://mifos.org/"><img src="../../static/images/mifos_lg-logo.jpg" width="200" th:src="@{/images/mifos_lg-logo.jpg}"/></a>
-            </div>
+
+<!--<div class="row text-center">-->
+<!--                <a href="https://mifos.org/"><img src="../../static/images/mifos_lg-logo.jpg" width="200" th:src="@{/images/mifos_lg-logo.jpg}"/></a>-->
+<!--            </div>-->
+<div class="content-container ng-scope">
+<div class="card well ng-scope" id="expertsearch" data-ng-controller="ExpertSearchController">
+    <h3 class="paddedleft">
+        <strong class="ng-binding">Welcome, mifos</strong>
+        <div class="btn-group pull-right">
+            <label class="btn btn-primary ng-pristine ng-untouched ng-valid ng-binding ng-not-empty" ng-model="dashModel" btn-radio="'dashboard'">
+                <i class="fa fa-home">
+
+                </i>
+                "&nbsp;&nbsp;Home"
+            </label>
+            <label class="btn btn-primary ng-pristine ng-untouched ng-valid ng-binding ng-not-empty" ng-click="switch()" ng-model="dashModel" btn-radio="'rich-dashboard'">
+                <i class="fa fa-tachometer">
+
+                </i>
+                "&nbsp;&nbsp;Dashboard"
+            </label>
+        </div>
+    </h3>
+    <hr/>
+    <input id="expert" type="text" data-ng-model="formData.search" placeholder="Search activities" class="col-md-4 form-control ng-pristine ng-valid ng-empty ng-touched" typeahead-on-select="search()" ng-autofocus="true" uib-typeahead="param as param for param in searchParams | filter:$viewValue | limitTo:8" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-98-6993"/>
+    <div id="home" class="row">
+        <div class="col-md-8 ng-binding">
+            <h3 class="ng-binding">You can navigate your way through MifosX using: </h3>
+            <i class="fa fa-arrow-left"></i>
+            "the shortcuts to the left &nbsp;&nbsp;"
+            <i class="fa fa-arrow-up"></i>
+            "the menu at the top &nbsp;&nbsp;"
+            <i class="fa fa-arrow-up top-right"></i>
+            "the search tool at the top right"
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+            <img src="../../static/images/mifos_lg-logo.jpg" width="500" th:src="@{/images/mifos_lg-logo.jpg}" alt="MifosX" class="img-responsive ng-scope" ng-if="!isLargeLogoPath"/>
+        </div>
+    </div>
+</div>
+</div>
 
 
 
