@@ -168,7 +168,8 @@ table {
 #button
 {
     float: right;
-	margin-right: 10px;
+	margin-right: 20px;
+	padding-right: 20px;
 }
 
 #active
