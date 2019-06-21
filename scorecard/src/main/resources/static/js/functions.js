@@ -59,18 +59,19 @@ function goTo(url)
     // window.location.reload();
 
 };
+function goTocon(url)
+{
+	// conso
+	// When using on click comment out url line
+	url = 'localhost:8233/configuration/'+url;
+	console.log(url);
+	// window.location.assign(''+url);
+	window.open(url);
+	// window.location.reload();
 
-// function goTocon(url)
-// {
-//     // conso
-//     // When using on click comment out url line
-//     url = 'localhost:8233/configuration/'+url;
-//     console.log(url);
-//     // window.location.assign(''+url);
-//     window.open(url);
-//     // window.location.reload();
-//
-// };
+};
+
+
 
 // function myFunction()
 // {
