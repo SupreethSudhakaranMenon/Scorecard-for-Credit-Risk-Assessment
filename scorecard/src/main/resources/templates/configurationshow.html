@@ -3,6 +3,11 @@
 <head lang="en">
 
    <title>Scorecard for Credit Risk Assessment</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="../../../static/js/functions.js" th:src="@{/js/functions.js}"></script>
+    <link href="../../../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" media="screen"/>
+    <link href="../../../static/css/font-awesome.css" th:href="@{/css/font-awesome.css}" rel="stylesheet" media="screen"/>
+
 
     <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
 </head>
@@ -16,7 +21,7 @@
             </div>
             &nbsp;
             &nbsp;
-    <h2>User Information</h2>
+    <h4 id="header2">Configuration Details</h4>
     &nbsp;
     &nbsp;
         <div>
@@ -64,15 +69,119 @@
                 		<p class="form-control-static" th:text="${configuration.torange}">to</p>
                 	</div>
                 </div>
-                
-                
-                
-                 
-               
-               
             </form>
     </div>
     
+</div>
+<!--For side navigation-->
+<div id="mifos-reskin-side-nav" ng-scrollbar="" class="ng-isolate-scope" style="overflow: hidden;"><div class="ngsb-wrap" style="position: relative; overflow: hidden; max-width: 100%; height: 513px;"><div class="ngsb-container" ng-transclude="" style="position: relative; top: 0px; overflow: hidden;">
+    <div class="left-nav ng-scope">
+        <ul>
+            <!-- <li>
+                 <a class="black" href="views/help.html">
+                     <i class="fa fa-keyboard-o"></i>
+                     <span class="ng-binding">Keyboard Shortcuts</span>
+                 </a>
+             </li>
+-->
+            <li>
+                <a class="black" href="https://www.google.com/">
+                    <i class="fa fa-compass "></i>
+                    <span class="ng-binding">Navigation</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" href="views/tasks.html">
+                    <i class="fa fa-check "></i>
+                    <span class="ng-binding">Checker Inbox &amp; Tasks</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" href="views/collection/collectionsheet.html">
+                    <i class="fa fa-tasks "></i>
+                    <span class="ng-binding">Collection sheet</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" href="views/collection/individualcollectionsheet.html">
+                    <i class="fa fa-tasks "></i>
+                    <span class="ng-binding">Individual Collection Sheet</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" href="views/accounting/freqposting.html">
+                    <i class="fa fa-repeat "></i>
+                    <span class="ng-binding">Frequent Postings</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" href="views/accounting/journalentry_posting.html">
+                    <i class="fa fa-plus "></i>
+                    <span class="ng-binding">Add Journal Entries</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" href="views/accounting/accounts_closure.html">
+                    <i class="fa fa-folder "></i>
+                    <span class="ng-binding">Closing Entries</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" href="views/accounting/accounting_coa.html">
+                    <i class="fa fa-sitemap "></i>
+                    <span class="ng-binding">Chart of Accounts</span>
+                </a>
+            </li>
+            <li>
+                <a class="black" href="views/notification/notifications.html">
+                    <i class="fa fa-bell"></i>
+                    <span class="ng-binding">Notifications</span>
+                </a>
+            </li>
+            <li>
+                <a class="black" href="views/clients/createclient.html">
+                    <i class="fa fa-user "></i>+ <span class="ng-binding">Client</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" href="views/groups/creategroup.html">
+                    <i class="fa fa-group "></i>+ <span class="ng-binding">Group</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" href="views/centers/createcenter.html">
+                    <i class="fa fa-map-marker "></i>+ <span class="ng-binding">Center</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" ng-click="helpf()" href="views/help.html">
+                    <i class="fa fa-question-circle"></i>
+                    <span class="ng-binding">Help</span>
+                    <i class="fa fa-external-link"></i>
+                </a>
+            </li>
+
+            <!-- newly added -->
+
+        </ul>
+    </div>
+</div><div class="ngsb-scrollbar" style="position: absolute; display: block;" ng-show="showYScrollbar"><div class="ngsb-thumb-container"><div class="ngsb-thumb-pos" oncontextmenu="return false;" style="position: absolute; height: 467px; top: 0px;"><div class="ngsb-thumb" style="position: relative; line-height: 467px; top: 0px;"></div></div><div class="ngsb-track"></div></div></div></div></div>
+
+<!--FOOTER-->
+<div class="footer">
+    <footer id="footer">
+        <div id="footer-content"><a href="https://mifosforge.jira.com/browse/MIFOSX/component/11710/?selectedTab=com.atlassian.jira.jira-projects-plugin:component-changelog-panel"><p id="pfooter">Release Version: 19.05.RELEASE | Mifos X Release Date: 10/May/2019</p></a></div>
+    </footer>
 </div>
 
 </body>
