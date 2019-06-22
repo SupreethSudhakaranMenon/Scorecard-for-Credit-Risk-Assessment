@@ -21,7 +21,10 @@ Add this small snippet in this file `/resources/application.properties`
 
 `server.port = 7777`  
 **"Server port number can be changed."**
+Also the port number should be changed in functions.js file to view details of features and configurations.
 
 ## Usage  
 Still under construction , some features may not work.  
 Run the project through IDE and head out to the `localhost` port as set by you.
+
+
