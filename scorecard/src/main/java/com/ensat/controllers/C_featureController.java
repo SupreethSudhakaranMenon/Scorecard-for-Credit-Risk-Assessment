@@ -36,7 +36,7 @@ public class C_featureController {
 		model.addAttribute("c_feature" , c_featureService.getCfeatureById(id));
 		return "c_featureshow";
 	}
-	
+
 	
 	
 	@RequestMapping("c_feature/edit/{id}")
@@ -58,8 +58,9 @@ public class C_featureController {
 	@RequestMapping(value="c_feature" , method=RequestMethod.POST)
 	public String saveCfeature(C_feature c_feature) {
 		c_featureService.saveCfeature(c_feature);
-		return "redirect:/c_feature/" + c_feature.getId();
+		return "redirect:/c_features/";
 	}
+//	Made change here
 	
 	@RequestMapping("c_feature/delete/{id}")
 	public String delete(@PathVariable Integer id) {

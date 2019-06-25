@@ -4,7 +4,7 @@
 function conf()
 {
 	alert("The Details have been submitted");
-	
+
 }
 
 // function conf()
@@ -71,7 +71,16 @@ function goTocon(url)
 
 };
 
-
+// function checkInp()
+// {
+// 	var x = document.forms["feature"]["features"].value;
+// 	var regex = /^[a-zA-Z]+$/;
+// 	if (!x.match(regex))
+// 	{
+// 		alert("Must input string");
+// 		return false;
+// 	}
+// }
 
 // function myFunction()
 // {

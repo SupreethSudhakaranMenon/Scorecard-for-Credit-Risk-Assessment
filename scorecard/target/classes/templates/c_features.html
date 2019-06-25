@@ -29,12 +29,19 @@
             <div class="col2">
                 <input class="form-control" id="field2" type="text" style="width:200px;"  placeholder="Find by name/mobile/client/externalId/..."/>
             </div>
-            <div class="col3">
-                <label><input type="checkbox" style="zoom:1.6" class="form-check-input" id="Check1"/>Show close</label>
+            <div class="col2">
+                <label for="showAll" class="ng-binding">
+                    <input type="checkbox" id="showAll" name="showAll" ng-model="showClosed"  class="ng-pristine ng-untouched ng-valid ng-empty"/>
+                    Show Closed
+                </label>
             </div>
-            <div id="test" class="col-sm-3">
-                <a href="#" th:href="@{/c_features}" class="btn btn-primary">Import Features</a>
-                <a href="#" th:href="@{/c_feature/new}" class="btn btn-primary">Create Feature</a>
+            <div  class="col-sm-4">
+                <a href="#" th:href="@{/c_features}" class="btn btn-primary">
+                    <i class="fa fa-upload"></i>&nbsp;Import Feature
+                </a>
+                <a href="#" th:href="@{/c_feature/new}" class="btn btn-primary">
+                    <i class="fa fa-plus"></i>&nbsp;Create Feature
+                </a>
             </div>
         </div>
 

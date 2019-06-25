@@ -12,27 +12,90 @@
 <body>
 <div class="container">
     <div th:fragment="header">
+        <div id="mifos-reskin-header-nav" class="ng-scope">
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a href="#" id="leftnav-toggle"><span class="fa fa-bars"></span></a>
                     <a class="navbar-brand" href="https://mifos.org/"><img src="../../static/images/mifos-logo-flat.png" width="80" th:src="@{/images/mifos-logo-flat.png}"/></a>
-                    <ul class="nav navbar-nav">
-                    	<li><a href="#" th:href="@{/}">Home</a></li>
-                        <li><a href="#" th:href="@{/c_features}">Feature-Details</a></li>
-                        <li><a href="#" th:href="@{/configurations}">Configuration-Details</a></li>
+                    <ul class="nav navbar-nav" id="main-menu-left">
+<!--                    	<li><a href="#" th:href="@{/}">-->
+<!--                            <i class="fa fa-home"></i>&nbsp;Home-->
+<!--                        </a></li>-->
+                        <li><a href="#" th:href="@{/c_features}">
+                            <i class="fa fa-bar-chart-o"></i>&nbsp;Feature-Details
+                        </a></li>
+                        <li><a href="#" th:href="@{/configurations}">
+                            <i class="fa fa-bar-chart-o"></i>&nbsp;Configuration-Details
+                        </a></li>
 <!--                        <li><a href="#" th:href="@{/criterias}">Criteria-Details</a></li>-->
 <!--                        <li><a href="#" th:href="@{/scorecards}">Scorecard-Details</a></li>-->
-                        <li><a href="#" th:href="@{/c_feature/new}">Create Feature Screen</a></li>
-                        <li><a href="#" th:href="@{/configuration/new}">Create Configuration Screen</a></li>
+                        <li><a href="#" th:href="@{/c_feature/new}">
+                            <i class="fa fa-plus-square"></i>&nbsp;Create Feature Screen
+                        </a></li>
+                        <li><a href="#" th:href="@{/configuration/new}">
+                            <i class="fa fa-plus-square"></i>&nbsp;Create Configuration Screen
+                        </a></li>
 <!--                        <li><a href="#" th:href="@{/criteria/new}">Create Criteria Screen</a></li>-->
 <!--                        <li><a href="#" th:href="@{/scorecard/new}">Create Scorecard Screen</a></li>-->
                     </ul>
+                    <ul class="nav navbar-nav navbar-right" id="main-menu-right">
+                        <li class="ng-scope dropdown" id="notification-icon">
+                            <a href="#" class="dropdown-toggle">
+                                <span class="fa fa-bell"></span>
+                            </a>
+<!--                            <div class="numberCircle ng-binding ng-hide" ng-hide="numberOfUnreadNotifications">-->
+
+<!--                            </div>-->
+<!--                            <ul class="notification-container dropdown-menu">-->
+<!--                                <li class="notification-list-link">-->
+<!--                                    <a href="#">Show all notifications</a>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+                        </li>
+                        <li class="dropdown" id="user-menu" is-open="li.user.status.isopen" ng-mouseenter="li.user.status.isopen=true" ng-mouseleave="li.user.status.isopen=false">
+                            <a id="user-dropdown" class="ng-binding dropdown-toggle" aria-haspopup="true" aria-expanded="true">mifos<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a id="help" ng-click="helpf()" class="ng-binding dropdown-toggle" >
+                                            <i class="fa fa-question-circle"></i>Help
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#/profile" class="ng-binding">
+                                            <i class="fa fa-user"></i>Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#/usersetting" class="ng-binding">
+                                            <i class="fa fa-cog"></i>Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="logout" data-ng-click="logout()" class="ng-binding">
+                                            <i class="fa fa-power-off"></i>Sign Out
+                                        </a>
+                                    </li>
+                                </ul>
+                        </li>
+                    </ul>
+<!--                    <form ng-submit="searc()" class="navbar-form navbar-right ngpristine ng-valid">-->
+<!--                        <div class="input-group pull-left">-->
+<!--                            <input id="search"  type="text" class="form-control" style="width: 250px;" placeholder="Click or press alt+x to Search"/>-->
+<!--                            <div class="input-group-btn search-panel dropdown">-->
+<!--                                <button type="button" class="btn btn-default btn-sm ng-binding dropdown-toggle">All<span class="caret"></span></button>-->
+<!--                                <ul class="dropdown-menu">-->
+<!--                                    <li class="ng-scope dropdown"><a href="#" class="ng-binding">All</a></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </form>-->
               </div>
             </div>
         </nav>
-                     
-   </div>
-</div> 
+        </div>
+    </div>
+</div>
+
 </body>
 </html>

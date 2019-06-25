@@ -56,7 +56,6 @@
 
 .two-col .col1,
 .two-col .col2,
-.two-col .col3
 {
 	width: 20%; /*used for spacing betweeen two of the search bars*/
 }
@@ -70,13 +69,6 @@
 	float: left;
 }
 
-.two-col .col3 {
-	float: left;
-}
-
-.two-col label {
-	display: block;
-}
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {  /*Used for table one hover change colour to blue for c_features*/
 	background-color: #4F99ED;

@@ -4,7 +4,7 @@ USE `springbootdb`;
 -- Table structure for table `product`
 
 
-DROP TABLE IF EXISTS `c_feature`;
+-- DROP TABLE IF EXISTS `c_feature`;
 
 
 

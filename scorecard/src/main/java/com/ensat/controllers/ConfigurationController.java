@@ -57,8 +57,9 @@ public class ConfigurationController {
     @RequestMapping(value = "configuration", method = RequestMethod.POST)
     public String saveConfiguration(Configuration configuration) {
         configurationService.saveConfiguration(configuration);
-        return "redirect:/configuration/" + configuration.getId();
+        return "redirect:/configurations/";
     }
+//    Made change here
 
     @RequestMapping("configuration/delete/{id}")
     public String delete(@PathVariable Integer id) {
