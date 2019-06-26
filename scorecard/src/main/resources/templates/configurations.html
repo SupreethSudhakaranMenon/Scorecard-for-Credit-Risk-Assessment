@@ -20,25 +20,61 @@
         <div class="card">&nbsp;
             <h4 id="header2">List of Configurations</h4>
             <hr style="width: 100%; color: #666F73; height: 1px;" />
-            <div class="two-col">
-                <div class="col1">
-                    <input class="form-control" id="field1" type="text" style="width:200px; padding: 10px;" placeholder="Filter display by name/client..."/>
+<!--            <div class="two-col">-->
+<!--                <div class="col1">-->
+<!--                    <input class="form-control" id="field1" type="text" style="width:200px; padding: 10px;" placeholder="Filter display by name/client..."/>-->
+<!--                </div>-->
+<!--                <div class="col2">-->
+<!--                    <input class="form-control" id="field2" type="text" style="width:200px;"  placeholder="Find by name/mobile/client/externalId/..."/>-->
+<!--                </div>-->
+<!--                <div class="col2">-->
+<!--                    <label for="showAll" class="ng-binding">-->
+<!--                        <input type="checkbox" id="showAll" name="showAll" ng-model="showClosed"  class="ng-pristine ng-untouched ng-valid ng-empty"/>-->
+<!--                        Show Closed-->
+<!--                    </label>-->
+<!--                </div>-->
+<!--                <div  class="col-sm-4">-->
+<!--                    <a href="#" th:href="@{/configurations}" class="btn btn-primary">-->
+<!--                        <i class="fa fa-upload"></i>&nbsp;Import Configuration-->
+<!--                    </a>-->
+<!--                    <a href="#" th:href="@{/configuration/new}" class="btn btn-primary">-->
+<!--                        <i class="fa fa-plus"></i>&nbsp;Create Configuration-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <div class="row">
+                <div class="col-sm-8">
+                    <form ng-submit="search()" class="form-horizontal ng-pristine ng-valid">
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <input ng-autofocus="true" ng-model="filterText" ng-keyup="onFilter()" type="text" class="form-control unstyled ng-pristine ng-valid ng-empty ng-touched" placeholder="Filter display by name/client/staff/office"/>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <input data-ng-model="searchText" type="text" placeholder="Find by name/mobile/client/externalId/identifier" class="form-control unstyled ng-pristine ng-valid ng-empty ng-untouched"/>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary form-control">
+                                            <span class="fa fa-search">
+                                            </span>
+                                        </button>
+                                    </span>
+                                    <div class="checkbox form-control">
+                                        <label for="showAll" class="ng-binding">
+                                            <input type="checkbox" id="showAll" name="showAll" ng-model="showClosed" class="ng-pristine ng-untouched ng-valid ng-empty"/>Show Closed
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="col2">
-                    <input class="form-control" id="field2" type="text" style="width:200px;"  placeholder="Find by name/mobile/client/externalId/..."/>
-                </div>
-                <div class="col2">
-                    <label for="showAll" class="ng-binding">
-                        <input type="checkbox" id="showAll" name="showAll" ng-model="showClosed"  class="ng-pristine ng-untouched ng-valid ng-empty"/>
-                        Show Closed
-                    </label>
-                </div>
-                <div  class="col-sm-4">
-                    <a href="#" th:href="@{/configurations}" class="btn btn-primary">
+                <div class="col-sm-4">
+                    <a href="#" th:href="@{/configuration/new}" class="btn btn-primary pull-right ng-binding">
+                        <i class="fa fa-plus"></i>Create Configuration
+                    </a>&nbsp;&nbsp;
+                    <a href="#" th:href="@{/configurations}" class="btn btn-primary pull-right ng-binding">
                         <i class="fa fa-upload"></i>&nbsp;Import Configuration
-                    </a>
-                    <a href="#" th:href="@{/configuration/new}" class="btn btn-primary">
-                        <i class="fa fa-plus"></i>&nbsp;Create Configuration
                     </a>
                 </div>
             </div>

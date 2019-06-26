@@ -67,8 +67,8 @@
 
 .two-col .col2 {
 	float: left;
+	padding-left: 10px;
 }
-
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {  /*Used for table one hover change colour to blue for c_features*/
 	background-color: #4F99ED;

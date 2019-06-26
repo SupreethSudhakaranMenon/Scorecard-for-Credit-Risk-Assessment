@@ -28,13 +28,13 @@ function colourchange1()
 
 }
 
-var ourRequest = new XMLHttpRequest();
-ourRequest.open('GET','https://supreethsudhakaranmenon.github.io/details.json');
-ourRequest.onload = function() {
-	 //console.log(ourRequest.responseText);
-};
-ourRequest.send();
-var test = JSON.stringify(ourRequest.responseText);
+// var ourRequest = new XMLHttpRequest();
+// ourRequest.open('GET','https://supreethsudhakaranmenon.github.io/details.json');
+// ourRequest.onload = function() {
+// 	 //console.log(ourRequest.responseText);
+// };
+// ourRequest.send();
+// var test = JSON.stringify(ourRequest.responseText);
 
 
 
@@ -71,35 +71,31 @@ function goTocon(url)
 
 };
 
-// function checkInp()
-// {
-// 	var x = document.forms["feature"]["features"].value;
-// 	var regex = /^[a-zA-Z]+$/;
-// 	if (!x.match(regex))
-// 	{
-// 		alert("Must input string");
-// 		return false;
-// 	}
-// }
+// Used from /app/scripts/filters/SearchFilter.js
 
-// function myFunction()
-// {
-// 	var input , filter , ul , li , a, i;
-// 	input = document.getElementById("myInput")
-// 	filter = input.value.toUpperCase();
-// 	ul = document.getElementsByClassName("list-group");
-// 	li = ul.document.getElementsByTagName("li");
-// 	for (i=0;<li.length;i++)
-// 	{
-// 		a = li[i].getElementsByTagName("a")[0];
-// 		if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-// 			li[i].style.display = "";
-// 		}
-// 		else {
-// 			li[i.style.display = "none";]
-// 		}
-// 	}
-// }
+(function (module) {
+	mifosX.filters = _.extend(module, {
+		SearchFilter: function () {
+			return function (list, searchText) {
+				var searchRegx = new RegExp(searchText, "i");
+				if (searchText == undefined) {
+					return list;
+				}
+				var result = [];
+				for (i = 0; i < list.length; i++) {
+					if (list[i].name.search(searchRegx) != -1 ||
+						list[i].glCode.toString().search(searchRegx) != -1 || list[i].type.value.search(searchRegx) != -1 ) {
+						result.push(list[i]);
+					}
+				}
+				return result;
+			}
+		}
+	});
+	mifosX.ng.application.filter('SearchFilter', [mifosX.filters.SearchFilter]).run(function ($log) {
+		$log.info("SearchFilter filter initialized");
+	});
+}(mifosX.filters || {}));
 
 
 

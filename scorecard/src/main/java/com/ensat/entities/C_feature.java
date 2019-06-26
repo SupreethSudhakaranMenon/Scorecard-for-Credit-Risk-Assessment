@@ -20,13 +20,11 @@ public class C_feature {
 	    private String data;
 	    private String category;
 	    private String status;
-	    
-	    
-	    
-	   
-	    
 
-	    public Integer getId() {
+
+
+
+	public Integer getId() {
 	        return id;
 	    }
 	    
@@ -48,6 +46,8 @@ public class C_feature {
 	    public String getCategory() {
 			return category;
 		}
+
+
 	   
 
 
