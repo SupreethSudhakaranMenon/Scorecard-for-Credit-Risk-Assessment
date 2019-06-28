@@ -8,7 +8,7 @@ https://gist.github.com/SupreethSudhakaranMenon/557660bfad089de12d3befb6d71a627d
 Just import it to your IDE and build the project to resolve the dependencies. 
 
 ## Database Configuration
-Add Database credentials to `/resources/application.properties`  
+Create a MySQL database with the name `springbootdb` and add credentials to `/resources/application.properties`  
 The Default ones are :  
 
 `spring.datasource.url=jdbc:mysql://localhost:3306/springbootdb`    
