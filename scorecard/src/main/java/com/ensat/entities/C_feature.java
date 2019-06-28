@@ -20,6 +20,7 @@ public class C_feature {
 	    private String data;
 	    private String category;
 	    private String status;
+	    private String feature;
 
 
 
@@ -43,27 +44,15 @@ public class C_feature {
 	    public String getCharacteristic() {
 			return characteristic;
 		}
+
+		public String getFeature() {
+			return feature;
+		}
+
 	    public String getCategory() {
 			return category;
 		}
 
-
-	   
-
-
-	   
-	    
-	    
-	    
-	    
-	   
-	    
-	    
-	    
-	    
-	    
-	    
-	    
 	    
 	    public void setId(Integer id) {
 	        this.id = id;
@@ -77,14 +66,19 @@ public class C_feature {
 	        this.data = data;
 	    }
 
-		
 
 		public void setCharacteristic(String characteristic) {
 			this.characteristic = characteristic;
 		}
+
+		public void setFeature(String feature) {
+			this.feature = feature;
+		}
+
 		public void setValue(String value) {
 			this.value = value;
 		}
+
 		public void setCategory(String category) {
 			this.category = category;
 		}

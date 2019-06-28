@@ -106,9 +106,7 @@
                     <td th:text="${c_feature.value}">Value</td>
                     <td th:text="${c_feature.data}">Data</td>
                     <td th:text="${c_feature.category}">Category</td>
-                    <td th:text="${c_feature.status}">
-                        <i class="fa fa-stop statusactive" uib-tooltip="Active" uib-tooltip-placement="top"></i>&nbsp;Status
-                    </td>
+                    <td th:text="${c_feature.status}">Status</td>
                     <td><a th:href="${ '/c_feature/' + c_feature.id}"><button type="submit" class="btn btn-primary">Get</button></a></td>
                     <td><a th:href="${'/c_feature/edit/' + c_feature.id}"><button type="submit" class="btn btn-primary">Update</button></a></td>
 <!--                    <td><a th:href="${'/c_feature/delete/' + c_feature.id}"><button type="submit" class="btn btn-primary">Delete</button></a></td>-->
