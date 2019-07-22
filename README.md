@@ -25,6 +25,16 @@ Also the port number should be changed in functions.js file to view details of f
 
 ## Usage  
 Still under construction , some features may not work.  
-Run the project through IDE and head out to the `localhost` port as set by you.
+Run the project through IDE and head out to the `localhost` port as set by you.  
+
+## Configuring Project SDK  
+While importing to your IDE and making it to run , if the Build fails because of the Project SDK then, follow the below steps.**in IntelliJ**
+1. Go to File menu. 
+2. In the File menu , select Project Structure.  
+3. A Project Structure window appears on the screen.  
+4. In that window, under **Platform Settings** select **SDK's**.  
+5. Now , you can delete the present **SDK** version and under **Project Settings** select **Project**.  
+6. In **Project SDK** select the SDK again.
+
 
 
