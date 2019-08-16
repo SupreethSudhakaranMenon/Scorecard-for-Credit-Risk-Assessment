@@ -10,13 +10,67 @@
 <div class="container">
     <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
     <div th:if="${not #lists.isEmpty(criterias)}">
-    <div class="row text-center">
-                <a href="https://mifos.org/"><img src="../../static/images/mifos_logo.jpg" width="200" th:src="@{/images/mifos_logo.jpg}"/></a>
+<!--    <div class="row text-center">-->
+<!--                <a href="https://mifos.org/"><img src="../../static/images/mifos_logo.jpg" width="200" th:src="@{/images/mifos_logo.jpg}"/></a>-->
+<!--            </div>-->
+<!--            &nbsp;-->
+        <p style="color: #777777; font-size: 12px;">Criterias</p>
+        <div class="card">&nbsp;
+            <h4 id="header2">List of Criterias</h4>
+
+
+            <div class="row">
+                <div class="col-sm-8">
+                    <form ng-submit="search()" class="form-horizontal ng-pristine ng-valid">
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <input ng-autofocus="true" ng-model="filterText" ng-keyup="onFilter()" type="text" class="form-control unstyled ng-pristine ng-valid ng-empty ng-touched" placeholder="Filter display by name/client/staff/office"/>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <input data-ng-model="searchText" type="text" placeholder="Find by name/mobile/client/externalId/identifier" class="form-control unstyled ng-pristine ng-valid ng-empty ng-untouched"/>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary form-control">
+                                            <span class="fa fa-search">
+                                            </span>
+                                        </button>
+                                    </span>
+                                    <div class="checkbox form-control">
+                                        <label for="showAll" class="ng-binding">
+                                            <input type="checkbox" id="showAll" name="showAll" ng-model="showClosed" class="ng-pristine ng-untouched ng-valid ng-empty"/>Show Closed
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#" th:href="@{/configuration/new}" class="btn btn-primary pull-right ng-binding">
+                        <i class="fa fa-plus"></i>Create Configuration
+                    </a>&nbsp;&nbsp;
+                    <a href="#" th:href="@{/configurations}" class="btn btn-primary pull-right ng-binding">
+                        <i class="fa fa-upload"></i>&nbsp;Import Configuration
+                    </a>
+                </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <hr style="width: 100%; color: #666F73; height: 1px;" />
             &nbsp;
-            &nbsp;
-        <h2>Information</h2>
         <table class="table table-striped table-hover">
+            <thead>
             <tr>
                	<th>Id</th>
                 <th>Data Source</th>
@@ -26,6 +80,7 @@
                 <th>Update</th>
                 <th>Delete</th>	
             </tr>
+            </thead>
             <tr th:each="criteria : ${criterias}">
                 <td th:text="${criteria.id}"><a href="/criteria/${criteria.id}">Id</a></td>
                 <td th:text="${criteria.datasource}">Data Source</td>
@@ -40,6 +95,128 @@
 
     </div>
 </div>
+</div>
+
+<!--For side navigation-->
+<div id="mifos-reskin-side-nav" ng-scrollbar="" class="ng-isolate-scope" style="overflow: hidden;"><div class="ngsb-wrap" style="position: relative; overflow: hidden; max-width: 100%; height: 513px;"><div class="ngsb-container" ng-transclude="" style="position: relative; top: 0px; overflow: hidden;">
+    <div class="left-nav ng-scope">
+        <ul>
+            <!-- <li>
+                 <a class="black" href="views/help.html">
+                     <i class="fa fa-keyboard-o"></i>
+                     <span class="ng-binding">Keyboard Shortcuts</span>
+                 </a>
+             </li>
+-->
+            <li>
+                <a class="black" href="https://www.google.com/">
+                    <i class="fa fa-compass "></i>
+                    <span class="ng-binding">Navigation</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" href="views/tasks.html">
+                    <i class="fa fa-check "></i>
+                    <span class="ng-binding">Checker Inbox &amp; Tasks</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" href="views/collection/collectionsheet.html">
+                    <i class="fa fa-tasks "></i>
+                    <span class="ng-binding">Collection sheet</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" href="views/collection/individualcollectionsheet.html">
+                    <i class="fa fa-tasks "></i>
+                    <span class="ng-binding">Individual Collection Sheet</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" href="views/accounting/freqposting.html">
+                    <i class="fa fa-repeat "></i>
+                    <span class="ng-binding">Frequent Postings</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" href="views/accounting/journalentry_posting.html">
+                    <i class="fa fa-plus "></i>
+                    <span class="ng-binding">Add Journal Entries</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" href="views/accounting/accounts_closure.html">
+                    <i class="fa fa-folder "></i>
+                    <span class="ng-binding">Closing Entries</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" href="views/accounting/accounting_coa.html">
+                    <i class="fa fa-sitemap "></i>
+                    <span class="ng-binding">Chart of Accounts</span>
+                </a>
+            </li>
+            <li>
+                <a class="black" href="views/notification/notifications.html">
+                    <i class="fa fa-bell"></i>
+                    <span class="ng-binding">Notifications</span>
+                </a>
+            </li>
+            <li>
+                <a class="black" href="views/clients/createclient.html">
+                    <i class="fa fa-user "></i>+ <span class="ng-binding">Client</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" href="views/groups/creategroup.html">
+                    <i class="fa fa-group "></i>+ <span class="ng-binding">Group</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" href="views/centers/createcenter.html">
+                    <i class="fa fa-map-marker "></i>+ <span class="ng-binding">Center</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="black" ng-click="helpf()" href="views/help.html">
+                    <i class="fa fa-question-circle"></i>
+                    <span class="ng-binding">Help</span>
+                    <i class="fa fa-external-link"></i>
+                </a>
+            </li>
+
+            <!-- newly added -->
+
+        </ul>
+    </div>
+</div><div class="ngsb-scrollbar" style="position: absolute; display: block;" ng-show="showYScrollbar"><div class="ngsb-thumb-container"><div class="ngsb-thumb-pos" oncontextmenu="return false;" style="position: absolute; height: 467px; top: 0px;"><div class="ngsb-thumb" style="position: relative; line-height: 467px; top: 0px;"></div></div><div class="ngsb-track"></div></div></div></div></div>
+
+&nbsp;
+&nbsp;
+<!--FOOTER-->
+<div class="footer">
+    <footer id="footer">
+        <div id="footer-content"><a href="https://mifosforge.jira.com/browse/MIFOSX/component/11710/?selectedTab=com.atlassian.jira.jira-projects-plugin:component-changelog-panel"><p id="pfooter">Release Version: 19.05.RELEASE | Mifos X Release Date: 10/May/2019</p></a></div>
+    </footer>
+</div>
+
+
+
+
+
+
+
+
 
 </body>
 </html>
