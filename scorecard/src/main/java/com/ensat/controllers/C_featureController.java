@@ -20,7 +20,7 @@ public class C_featureController {
 		this.c_featureService = c_featureService;
 	}
 	
-	/*List all details*/
+	/*List all  feature details*/
 	
 	@RequestMapping(value = "/c_features" , method = RequestMethod.GET)
 	public String list(Model model) {
